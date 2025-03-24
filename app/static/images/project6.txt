@@ -1,0 +1,7 @@
+This is a placeholder for project6.jpg
+
+Project: Chess Game in Java
+
+Please replace this file with an actual image related to chess games, Java game development, or board games. The image should be named project6.jpg and placed in this directory.
+
+Recommended image dimensions: 800x600 pixels

@@ -1,0 +1,7 @@
+This is a placeholder for project5.jpg
+
+Project: Flight Reservation Website
+
+Please replace this file with an actual image related to flight reservation, travel booking websites, or web development. The image should be named project5.jpg and placed in this directory.
+
+Recommended image dimensions: 800x600 pixels

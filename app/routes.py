@@ -31,7 +31,7 @@ def project_detail(project_id):
     if not project:
         flash('Project not found', 'danger')
         return redirect(url_for('projects'))
-    return render_template('project_detail.html', title=project.title, project=project, projects=Project.get_all_projects(), now=datetime.now())
+    return render_template('project_detail.html', title=project['title'], project=project, projects=Project.get_all_projects(), now=datetime.now())
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():

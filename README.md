@@ -1,56 +1,75 @@
-# Flask Portfolio
+# Flask Portfolio Website
 
-A performant personal portfolio web application built with Flask for a recent Master's graduate.
-
-## Project Overview
-
-This portfolio website showcases skills, projects, education, and experience in a clean, responsive interface. Built with Flask for backend functionality and optimized for performance.
+A personal portfolio website built with Flask for RASOLOARIVONY ANDRIANANTENAINA PRINCY.
 
 ## Features
 
-- Responsive design
-- Project showcase
-- Skills and expertise section
-- Education and experience timeline
+- Responsive design using Bootstrap 5
+- Home page with skills and featured projects
+- About page with education and work experience
+- Projects page with filtering functionality
+- Project detail pages
 - Contact form
-- Performance optimized
 
-## Tech Stack
+## Setup Instructions
 
-- **Backend**: Python, Flask
-- **Frontend**: HTML5, CSS3, JavaScript
-- **Database**: SQLite (for development), PostgreSQL (for production)
-- **Deployment**: Ready for deployment on platforms like Heroku, Vercel, or AWS
+1. Make sure you have Python installed (Python 3.6 or higher recommended)
+
+2. Install the required dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+
+3. Run the application:
+   ```
+   python run.py
+   ```
+
+4. Open your browser and navigate to:
+   ```
+   http://localhost:5000
+   ```
 
 ## Project Structure
 
+- `app/` - Main application directory
+  - `__init__.py` - Flask application initialization
+  - `routes.py` - Route definitions
+  - `models.py` - Data models
+  - `static/` - Static files (CSS, JS, images)
+  - `templates/` - HTML templates
+
+## Customization
+
+### Replacing Placeholder Images
+
+The website currently uses placeholder images for the projects. To replace them with actual images:
+
+1. Navigate to the `app/static/images/` directory
+2. Replace the following files with your actual project images:
+   - `project1.jpg` - Web Scraping & Product Classification
+   - `project2.jpg` - Spam Detection Web Application
+   - `project3.jpg` - Emotion Detection in Video
+   - `project4.jpg` - Sudoku Game
+   - `project5.jpg` - Flight Reservation Website
+   - `project6.jpg` - Chess Game in Java
+
+Alternatively, you can run the provided Python script to generate placeholder images:
+
 ```
-flask-portfolio/
-├── app/
-│   ├── static/
-│   │   ├── css/
-│   │   ├── js/
-│   │   └── images/
-│   ├── templates/
-│   ├── models.py
-│   ├── routes.py
-│   └── __init__.py
-├── config.py
-├── requirements.txt
-├── run.py
-└── README.md
+cd app/static/images
+python generate_placeholders.py
 ```
 
-## Getting Started
+This requires the Pillow library (`pip install pillow`).
 
-1. Clone the repository
-2. Create a virtual environment: `python -m venv venv`
-3. Activate the virtual environment:
-   - Windows: `venv\Scripts\activate`
-   - macOS/Linux: `source venv/bin/activate`
-4. Install dependencies: `pip install -r requirements.txt`
-5. Run the application: `python run.py`
+### Updating Content
+
+To update the website content, modify the following files:
+
+- `app/models.py` - Update project details, skills, education, and experience
+- `app/templates/` - Modify HTML templates for layout changes
 
 ## License
 
-MIT
+This project is licensed under the MIT License.

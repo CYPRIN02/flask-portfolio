@@ -1,0 +1,7 @@
+This is a placeholder for project4.jpg
+
+Project: Sudoku Game
+
+Please replace this file with an actual image related to the Sudoku game, puzzle games, or Python game development with Pygame. The image should be named project4.jpg and placed in this directory.
+
+Recommended image dimensions: 800x600 pixels

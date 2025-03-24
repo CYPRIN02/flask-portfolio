@@ -1,0 +1,7 @@
+This is a placeholder for project1.jpg
+
+Project: Web Scraping & Product Classification
+
+Please replace this file with an actual image related to web scraping, data classification, or machine learning applications. The image should be named project1.jpg and placed in this directory.
+
+Recommended image dimensions: 800x600 pixels
