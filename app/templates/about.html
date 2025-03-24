@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<!-- About Section -->
+<section class="about-section py-5">
+    <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+            <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Profile Image" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-lg-8">
+            <h1 class="mb-4">About Me</h1>
+            <p class="lead">
+                Recent Master's graduate in Computer Science with a passion for building performant web applications and solving complex problems.
+            </p>
+            <p>
+                I specialize in full-stack web development with a focus on Python and JavaScript frameworks. My academic background has equipped me with strong analytical skills and a deep understanding of computer science fundamentals, while my project experience has honed my practical development abilities.
+            </p>
+            <p>
+                I'm particularly interested in creating efficient, scalable applications that deliver exceptional user experiences. I enjoy working in collaborative environments where I can contribute my technical skills while continuing to learn and grow as a developer.
+            </p>
+            <div class="mt-4">
+                <a href="{{ url_for('static', filename='files/resume.pdf') }}" class="btn btn-primary me-2" target="_blank">
+                    <i class="fas fa-download me-2"></i>Download Resume
+                </a>
+                <a href="{{ url_for('contact') }}" class="btn btn-outline-dark">
+                    <i class="fas fa-envelope me-2"></i>Contact Me
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education Section -->
+<section class="education-section py-5 mt-5">
+    <h2 class="section-title mb-5">Education</h2>
+    
+    <div class="timeline">
+        {% for edu in education %}
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h3 class="h5 card-title">{{ edu.degree }}</h3>
+                        <h4 class="h6 text-muted">{{ edu.institution }}, {{ edu.location }}</h4>
+                        <p class="text-muted mb-2">{{ edu.period }}</p>
+                        <p class="card-text">{{ edu.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section class="experience-section py-5 mt-5">
+    <h2 class="section-title mb-5">Experience</h2>
+    
+    <div class="timeline">
+        {% for exp in experience %}
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h3 class="h5 card-title">{{ exp.title }}</h3>
+                        <h4 class="h6 text-muted">{{ exp.company }}, {{ exp.location }}</h4>
+                        <p class="text-muted mb-2">{{ exp.period }}</p>
+                        <p class="card-text">{{ exp.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Timeline styling */
+    .timeline {
+        position: relative;
+        padding-left: 30px;
+    }
+    
+    .timeline::before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: 0;
+        height: 100%;
+        width: 2px;
+        background-color: #dee2e6;
+    }
+    
+    .timeline-item {
+        position: relative;
+        margin-bottom: 30px;
+    }
+    
+    .timeline-dot {
+        position: absolute;
+        left: -30px;
+        top: 15px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #007bff;
+        z-index: 1;
+    }
+    
+    .timeline-content {
+        padding-bottom: 10px;
+    }
+</style>
+{% endblock %}

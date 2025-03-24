@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<!-- Projects Header -->
+<section class="projects-header py-5">
+    <h1 class="mb-4">My Projects</h1>
+    <p class="lead">
+        Here's a collection of projects I've worked on, showcasing my skills and experience in various technologies.
+    </p>
+</section>
+
+<!-- Projects Grid -->
+<section class="projects-grid py-3">
+    <div class="row">
+        {% for project in projects %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="{{ url_for('static', filename='images/' + project.image) }}" class="card-img-top" alt="{{ project.title }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ project.title }}</h5>
+                    <p class="card-text">{{ project.description }}</p>
+                    <div class="d-flex flex-wrap mb-3">
+                        {% for tech in project.technologies %}
+                        <span class="badge bg-secondary me-1 mb-1">{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="card-footer bg-white">
+                    <div class="d-flex justify-content-between">
+                        <a href="{{ url_for('project_detail', project_id=project.id) }}" class="btn btn-primary">View Details</a>
+                        <div>
+                            {% if project.github_url %}
+                            <a href="{{ project.github_url }}" target="_blank" class="btn btn-outline-dark me-1">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            {% endif %}
+                            {% if project.live_url %}
+                            <a href="{{ project.live_url }}" target="_blank" class="btn btn-outline-dark">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Project Categories (Optional) -->
+<section class="project-categories py-5 mt-4">
+    <h2 class="h4 mb-4">Filter by Technology</h2>
+    <div class="d-flex flex-wrap gap-2 mb-4">
+        <button class="btn btn-outline-primary active" data-filter="all">All</button>
+        <button class="btn btn-outline-primary" data-filter="Python">Python</button>
+        <button class="btn btn-outline-primary" data-filter="Flask">Flask</button>
+        <button class="btn btn-outline-primary" data-filter="JavaScript">JavaScript</button>
+        <button class="btn btn-outline-primary" data-filter="React">React</button>
+        <button class="btn btn-outline-primary" data-filter="SQL">SQL</button>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Simple filtering functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterButtons = document.querySelectorAll('[data-filter]');
+        const projectCards = document.querySelectorAll('.projects-grid .col-md-6');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const filterValue = this.getAttribute('data-filter');
+                
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Filter projects
+                if (filterValue === 'all') {
+                    projectCards.forEach(card => card.style.display = 'block');
+                } else {
+                    projectCards.forEach(card => {
+                        const technologies = card.querySelectorAll('.badge');
+                        let hasMatch = false;
+                        
+                        technologies.forEach(tech => {
+                            if (tech.textContent === filterValue) {
+                                hasMatch = true;
+                            }
+                        });
+                        
+                        card.style.display = hasMatch ? 'block' : 'none';
+                    });
+                }
+            });
+        });
+    });
+</script>
+{% endblock %}

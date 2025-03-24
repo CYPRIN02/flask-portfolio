@@ -1,0 +1,158 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ project.title }}{% endblock %}
+
+{% block content %}
+<!-- Project Detail Header -->
+<section class="project-header py-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ url_for('projects') }}">Projects</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ project.title }}</li>
+        </ol>
+    </nav>
+    
+    <div class="row align-items-center">
+        <div class="col-lg-8">
+            <h1 class="mb-3">{{ project.title }}</h1>
+            <div class="d-flex flex-wrap mb-4">
+                {% for tech in project.technologies %}
+                <span class="badge bg-secondary me-2 mb-2">{{ tech }}</span>
+                {% endfor %}
+            </div>
+            <div class="mb-4">
+                {% if project.github_url %}
+                <a href="{{ project.github_url }}" target="_blank" class="btn btn-dark me-2">
+                    <i class="fab fa-github me-2"></i>View on GitHub
+                </a>
+                {% endif %}
+                {% if project.live_url %}
+                <a href="{{ project.live_url }}" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-external-link-alt me-2"></i>Live Demo
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Image -->
+<section class="project-image mb-5">
+    <div class="card shadow-sm">
+        <img src="{{ url_for('static', filename='images/' + project.image) }}" class="card-img-top" alt="{{ project.title }}">
+    </div>
+</section>
+
+<!-- Project Description -->
+<section class="project-description py-4">
+    <div class="row">
+        <div class="col-lg-8">
+            <h2 class="h3 mb-4">Project Overview</h2>
+            <p class="lead mb-4">{{ project.description }}</p>
+            
+            <!-- Extended description - in a real app, you would have more detailed content here -->
+            <p>
+                This project was developed to address the need for a robust solution in this domain. 
+                It incorporates best practices in software development and leverages modern technologies 
+                to deliver a performant and user-friendly experience.
+            </p>
+            
+            <h3 class="h4 mt-5 mb-3">Key Features</h3>
+            <ul class="list-group list-group-flush mb-5">
+                <li class="list-group-item">Responsive design for optimal viewing on all devices</li>
+                <li class="list-group-item">Secure authentication and authorization system</li>
+                <li class="list-group-item">RESTful API architecture for seamless integration</li>
+                <li class="list-group-item">Optimized database queries for improved performance</li>
+                <li class="list-group-item">Comprehensive test coverage ensuring reliability</li>
+            </ul>
+            
+            <h3 class="h4 mt-5 mb-3">Technical Challenges</h3>
+            <p>
+                During the development of this project, several technical challenges were encountered and overcome:
+            </p>
+            <p>
+                One significant challenge was optimizing the application for performance while maintaining 
+                a clean and maintainable codebase. This was addressed by implementing efficient algorithms 
+                and following best practices for the specific technologies used.
+            </p>
+            <p>
+                Another challenge was ensuring seamless integration between the frontend and backend components. 
+                A well-defined API contract and comprehensive testing strategy helped overcome this challenge.
+            </p>
+        </div>
+        
+        <div class="col-lg-4">
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-light">
+                    <h3 class="h5 mb-0">Project Details</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <strong>Project Type:</strong> 
+                            <span class="text-muted">Web Application</span>
+                        </li>
+                        <li class="mb-3">
+                            <strong>Duration:</strong> 
+                            <span class="text-muted">3 months</span>
+                        </li>
+                        <li class="mb-3">
+                            <strong>Role:</strong> 
+                            <span class="text-muted">Full-stack Developer</span>
+                        </li>
+                        <li>
+                            <strong>Technologies:</strong><br>
+                            <div class="mt-2">
+                                {% for tech in project.technologies %}
+                                <span class="badge bg-secondary me-1 mb-1">{{ tech }}</span>
+                                {% endfor %}
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card shadow-sm">
+                <div class="card-header bg-light">
+                    <h3 class="h5 mb-0">Related Projects</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        {% for p in projects if p.id != project.id %}
+                            {% if loop.index <= 3 %}
+                            <li class="list-group-item px-0">
+                                <a href="{{ url_for('project_detail', project_id=p.id) }}" class="text-decoration-none">
+                                    {{ p.title }}
+                                </a>
+                            </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Navigation between projects -->
+<section class="project-navigation py-4 mt-5">
+    <div class="d-flex justify-content-between">
+        <a href="{{ url_for('projects') }}" class="btn btn-outline-secondary">
+            <i class="fas fa-arrow-left me-2"></i>Back to Projects
+        </a>
+        <div>
+            {% if project.id > 1 %}
+            <a href="{{ url_for('project_detail', project_id=project.id-1) }}" class="btn btn-outline-primary me-2">
+                <i class="fas fa-chevron-left me-2"></i>Previous Project
+            </a>
+            {% endif %}
+            
+            {% if project.id < projects|length %}
+            <a href="{{ url_for('project_detail', project_id=project.id+1) }}" class="btn btn-outline-primary">
+                Next Project<i class="fas fa-chevron-right ms-2"></i>
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

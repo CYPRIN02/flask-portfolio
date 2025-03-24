@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<!-- Contact Header -->
+<section class="contact-header py-5">
+    <h1 class="mb-4">Get In Touch</h1>
+    <p class="lead mb-5">
+        Have a question or want to work together? Feel free to reach out using the form below.
+    </p>
+</section>
+
+<!-- Contact Form and Info -->
+<section class="contact-content py-3">
+    <div class="row">
+        <div class="col-lg-7 mb-5 mb-lg-0">
+            <div class="card shadow-sm">
+                <div class="card-body p-4">
+                    <h2 class="h4 mb-4">Send a Message</h2>
+                    <form method="POST" action="{{ url_for('contact') }}">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-5">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body p-4">
+                    <h2 class="h4 mb-4">Contact Information</h2>
+                    <ul class="list-unstyled">
+                        <li class="d-flex mb-4">
+                            <div class="contact-icon me-3">
+                                <i class="fas fa-envelope fa-2x text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="h6 mb-1">Email</h3>
+                                <p class="mb-0">your.email@example.com</p>
+                            </div>
+                        </li>
+                        <li class="d-flex mb-4">
+                            <div class="contact-icon me-3">
+                                <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="h6 mb-1">Location</h3>
+                                <p class="mb-0">Paris, France</p>
+                            </div>
+                        </li>
+                        <li class="d-flex">
+                            <div class="contact-icon me-3">
+                                <i class="fas fa-globe fa-2x text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="h6 mb-1">Social Media</h3>
+                                <div class="social-links mt-2">
+                                    <a href="https://github.com/yourusername" target="_blank" class="me-3">
+                                        <i class="fab fa-github fa-lg"></i>
+                                    </a>
+                                    <a href="https://linkedin.com/in/yourusername" target="_blank" class="me-3">
+                                        <i class="fab fa-linkedin fa-lg"></i>
+                                    </a>
+                                    <a href="https://twitter.com/yourusername" target="_blank">
+                                        <i class="fab fa-twitter fa-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card shadow-sm">
+                <div class="card-body p-4">
+                    <h2 class="h4 mb-4">Availability</h2>
+                    <p>
+                        I'm currently available for freelance work, full-time positions, and collaborative projects.
+                    </p>
+                    <p class="mb-0">
+                        Response time: <span class="text-success">Within 24 hours</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .contact-icon {
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .social-links a {
+        color: #212529;
+        transition: color 0.3s ease;
+    }
+    
+    .social-links a:hover {
+        color: #0d6efd;
+    }
+</style>
+{% endblock %}
