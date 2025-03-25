@@ -20,12 +20,17 @@ A personal portfolio website built with Flask for RASOLOARIVONY ANDRIANANTENAINA
    pip install -r requirements.txt
    ```
 
-3. Run the application:
+3. Configure environment variables:
+   - Copy the `.env.example` file to `.env` (or create a new `.env` file)
+   - Update the values in the `.env` file with your own settings
+   - For Airtable integration, you'll need to set your Airtable API key in the `.env` file
+
+4. Run the application:
    ```
    python run.py
    ```
 
-4. Open your browser and navigate to:
+5. Open your browser and navigate to:
    ```
    http://localhost:5000
    ```
@@ -38,6 +43,27 @@ A personal portfolio website built with Flask for RASOLOARIVONY ANDRIANANTENAINA
   - `models.py` - Data models
   - `static/` - Static files (CSS, JS, images)
   - `templates/` - HTML templates
+
+## Features
+
+- Responsive design using Bootstrap 5
+- Home page with skills and featured projects
+- About page with education and work experience
+- Projects page with filtering functionality
+- Project detail pages
+- Contact form with Airtable integration
+- Environment variable configuration
+
+## Airtable Integration
+
+The contact form is integrated with Airtable to store form submissions. When a user submits the contact form, the data is sent to an Airtable base where you can manage and respond to inquiries.
+
+To set up the Airtable integration:
+
+1. Create an Airtable account if you don't have one already
+2. Get your Airtable API key from your account settings
+3. Set the `AIRTABLE_API_KEY` in your `.env` file
+4. The base ID and table ID are already configured in the `.env` file
 
 ## Customization
 

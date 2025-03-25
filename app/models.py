@@ -1,3 +1,6 @@
+import datetime
+
+
 class Project:
     """Model for portfolio projects"""
     
@@ -9,9 +12,9 @@ class Project:
                 'id': 1,
                 'title': 'Web Scraping & Product Classification',
                 'description': 'Application web for scraping and predicting product classification using machine learning techniques. Developed during my apprenticeship at ESGI.',
-                'technologies': ['Python', 'Flask', 'BigQuery', 'Machine Learning', 'Web Scraping'],
-                'image': 'project1.jpg',
-                'github_url': 'https://github.com/CYPRIN02/web-scraping-classification',
+                'technologies': ['Python', 'Flask', 'BigQuery', 'Machine Learning', 'Web Scraping', 'GCP'],
+                'image': 'page_sublimpick.jpg',
+                'github_url': 'https://github.com/CYPRIN02/projet_annuel_5IABD_sublimpick',
                 'live_url': None,
                 'featured': True
             },
@@ -20,8 +23,8 @@ class Project:
                 'title': 'Spam Detection Web Application',
                 'description': 'Web application that uses machine learning algorithms to detect spam messages. Built with Python and Flask, with a user-friendly interface for real-time spam detection.',
                 'technologies': ['Python', 'Flask', 'Machine Learning', 'NLP', 'HTML/CSS'],
-                'image': 'project2.jpg',
-                'github_url': 'https://github.com/CYPRIN02/spam-detection',
+                'image': 'page_spam_detection.jpg',
+                'github_url': 'https://github.com/CYPRIN02/projet_annuel_5IABD/tree/master',
                 'live_url': None,
                 'featured': True
             },
@@ -30,38 +33,64 @@ class Project:
                 'title': 'Emotion Detection in Video',
                 'description': 'Application that analyzes video content to detect and classify emotions in real-time. Uses computer vision and deep learning techniques to identify facial expressions.',
                 'technologies': ['Python', 'Flask', 'Computer Vision', 'Deep Learning', 'OpenCV'],
-                'image': 'project3.jpg',
-                'github_url': 'https://github.com/CYPRIN02/emotion-detection',
+                'image': 'page_accueille_analyse_video_pa4.jpg',
+                'github_url': 'https://github.com/CYPRIN02/projet_annuel4iabd',
                 'live_url': None,
                 'featured': True
             },
             {
                 'id': 4,
-                'title': 'Sudoku Game',
-                'description': 'Interactive Sudoku game developed with Python and Pygame. Features include puzzle generation, difficulty levels, and a solving algorithm.',
-                'technologies': ['Python', 'Pygame'],
-                'image': 'project4.jpg',
-                'github_url': 'https://github.com/uvsq-versailles/sudoku-game',
+                'title': 'Find Your Cours - Formation LangChain',
+                'description': '''
+                    Cours synthétique sur LangChain basé sur les dernières recherches (2022-2023).
+                    Intègre des ressources pédagogiques de deeplearning.ai et la documentation officielle.
+                    Contenu clé :
+                    - Architecture modulaire de LangChain
+                    - Gestion des prompts et mémoires contextuelles
+                    - Cas pratiques avec LLMs (GPT-3.5, Llama 2)
+                    - Bonnes pratiques de sécurité et déploiement
+                ''',
+                'technologies': [
+                    'Python', 
+                    'LangChain', 
+                    'LLMs', 
+                    'NLP', 
+                    'DeepLearning.ai',
+                    'Jupyter Notebook'
+                ],
+                'image': 'langchain-course.jpg',
+                'github_url': 'https://github.com/CYPRIN02/langchain-masterclass',
                 'live_url': None,
-                'featured': False
+                'featured': True,
+                'learning_resources': [
+                    {
+                        'name': 'LangChain Fundamentals Course',
+                        'url': 'https://learn.deeplearning.ai/courses/langchain',
+                        'author': 'Harrison Chase (Créateur de LangChain)'
+                    },
+                    {
+                        'name': 'Documentation Officielle',
+                        'url': 'https://python.langchain.com/'
+                    }
+                ]
             },
             {
                 'id': 5,
                 'title': 'Flight Reservation Website',
                 'description': 'Web application for booking flights, developed as a university project. Includes user authentication, flight search, and booking management.',
                 'technologies': ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
-                'image': 'project5.jpg',
+                'image': 'page_bdd_L3.jpg',
                 'github_url': 'https://github.com/uvsq-versailles/flight-reservation',
                 'live_url': None,
                 'featured': False
             },
             {
                 'id': 6,
-                'title': 'Chess Game in Java',
+                'title': 'Chess Game',
                 'description': 'Chess game implementation with Java, featuring a graphical user interface, move validation, and basic AI opponent.',
-                'technologies': ['Java', 'Swing'],
-                'image': 'project6.jpg',
-                'github_url': 'https://github.com/uvsq-versailles/chess-game',
+                'technologies': ['Python', 'Pygame'],
+                'image': 'page_chess.jpg',
+                'github_url': 'https://github.com/CYPRIN02/echec/tree/master',
                 'live_url': None,
                 'featured': False
             }
@@ -221,3 +250,35 @@ class Experience:
                 'description': 'Worked as a qualified team member while pursuing education.'
             }
         ]
+
+
+class Message:
+    """Model for contact form messages"""
+    
+    @staticmethod
+    def create(name, email, subject, content):
+        """Create a new message record"""
+        return {
+            'name': name,
+            'email': email,
+            'subject': subject,
+            'content': content,
+            'timestamp': datetime.datetime.now().isoformat(),
+            'read': False
+        }
+    
+    @staticmethod
+    def format_for_email(message):
+        """Format message for email notification"""
+        return f"""
+        New Contact Form Submission:
+        ----------------------------
+        Name: {message['name']}
+        Email: {message['email']}
+        Date: {message['timestamp']}
+        Subject: {message['subject']}
+        
+        Message:
+        {message['content']}
+        ----------------------------
+        """
