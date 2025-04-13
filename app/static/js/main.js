@@ -101,3 +101,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+// Dans votre fichier main.js ou dans un bloc script
+document.querySelectorAll('.skill-title').forEach(title => {
+    title.addEventListener('click', function() {
+        // Ajoute une rotation à l'icône (si vous en ajoutez une)
+        const icon = this.querySelector('i');
+        if (icon) {
+            icon.classList.toggle('rotate-90');
+        }
+    });
+});

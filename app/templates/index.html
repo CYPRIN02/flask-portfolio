@@ -65,7 +65,7 @@
 </section>
 
 <!-- Skills Section -->
-<section class="skills-section py-5 mt-5">
+<!-- <section class="skills-section py-5 mt-5">
     <h2 class="section-title text-center mb-5">Skills & Expertise</h2>
     
     {% for skill_category in skills %}
@@ -82,6 +82,53 @@
                     <div class="progress">
                         <div class="progress-bar" role="progressbar" style="width: {{ skill.level }}%" 
                              aria-valuenow="{{ skill.level }}" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+    
+    <div class="text-center mt-4">
+        <a href="{{ url_for('about') }}" class="btn btn-outline-primary">Learn More About Me</a>
+    </div>
+</section> -->
+<!-- Skills Section -->
+<section class="skills-section py-5 mt-5">
+    <h2 class="section-title text-center mb-5">Skills & Expertise</h2>
+    
+    {% for skill_category in skills %}
+    <div class="skill-category mb-5">
+        <h3 class="h4 mb-4">{{ skill_category.category }}</h3>
+        <div class="row">
+            {% for skill in skill_category['items'] %}
+            <div class="col-md-6 mb-3">
+                <div class="skill-item">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span class="fw-bold skill-title" 
+                              data-bs-toggle="collapse" 
+                              data-bs-target="#frameworks-{{ skill.name|lower|replace(' ', '-') }}"
+                              aria-expanded="false">
+                            {{ skill.name }}
+                        </span>
+                        <span>{{ skill.level }}%</span>
+                    </div>
+                    <div class="progress mb-2">
+                        <div class="progress-bar" role="progressbar" style="width: {{ skill.level }}%" 
+                             aria-valuenow="{{ skill.level }}" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    
+                    <!-- Sous-section Frameworks -->
+                    <div class="collapse" id="frameworks-{{ skill.name|lower|replace(' ', '-') }}">
+                        <div class="card card-body bg-light">
+                            <h6 class="mb-2">Frameworks & Technologies:</h6>
+                            <div class="d-flex flex-wrap">
+                                {% for framework in skill.get('frameworks', []) %}
+                                <span class="badge bg-secondary me-2 mb-2">{{ framework }}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

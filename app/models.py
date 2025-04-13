@@ -111,6 +111,69 @@ class Project:
         return None
 
 
+# class Skill:
+#     """Model for skills"""
+    
+#     @staticmethod
+#     def get_all_skills():
+#         """Return all skills (based on CV)"""
+#         return [
+#             {
+#                 'category': 'Programming Languages',
+#                 'items': [
+#                     {'name': 'Python', 'level': 90},
+#                     {'name': 'C#', 'level': 85},
+#                     {'name': 'HTML/CSS/JavaScript', 'level': 80},
+#                     {'name': 'SQL', 'level': 85}
+#                 ]
+#             },
+#             {
+#                 'category': 'Technologies & Tools',
+#                 'items': [
+#                     {'name': 'Flask', 'level': 85},
+#                     {'name': '.NET', 'level': 80},
+#                     {'name': 'Git (GitHub/BitBucket/GitLab)', 'level': 85},
+#                     {'name': 'Microsoft Office 365', 'level': 90}
+#                 ]
+#             },
+#             {
+#                 'category': 'Cloud & Databases',
+#                 'items': [
+#                     {'name': 'GCP', 'level': 75},
+#                     {'name': 'Azure', 'level': 75},
+#                     {'name': 'AWS', 'level': 70},
+#                     {'name': 'Heroku', 'level': 80},
+#                     {'name': 'SQL Server', 'level': 85},
+#                     {'name': 'MySQL', 'level': 85},
+#                     {'name': 'BigQuery', 'level': 80}
+#                 ]
+#             },
+#             {
+#                 'category': 'AI & Data Science',
+#                 'items': [
+#                     {'name': 'Machine Learning', 'level': 85},
+#                     {'name': 'LangChain', 'level': 75},
+#                     {'name': 'Data Analysis', 'level': 80}
+#                 ]
+#             },
+#             {
+#                 'category': 'Soft Skills',
+#                 'items': [
+#                     {'name': 'Agile Methodology', 'level': 85},
+#                     {'name': 'Teamwork', 'level': 90},
+#                     {'name': 'Adaptability', 'level': 85},
+#                     {'name': 'Self-Learning', 'level': 90}
+#                 ]
+#             },
+#             {
+#                 'category': 'Languages',
+#                 'items': [
+#                     {'name': 'French', 'level': 95},
+#                     {'name': 'English', 'level': 75},
+#                     {'name': 'Malagasy', 'level': 100}
+#                 ]
+#             }
+#         ]
 class Skill:
     """Model for skills"""
     
@@ -121,60 +184,59 @@ class Skill:
             {
                 'category': 'Programming Languages',
                 'items': [
-                    {'name': 'Python', 'level': 90},
-                    {'name': 'C#', 'level': 85},
-                    {'name': 'HTML/CSS/JavaScript', 'level': 80},
-                    {'name': 'SQL', 'level': 85}
+                    {'name': 'Python', 'level': 90, 'frameworks': ['Flask', 'Django', 'FastAPI']},
+                    {'name': 'Csharp', 'level': 85, 'frameworks': ['.NET Core', 'ASP.NET', 'Entity Framework']},
+                    {'name': 'HTML/CSS/JavaScript', 'level': 80, 'frameworks': ['React', 'Vue.js', 'Bootstrap']},
+                    {'name': 'SQL', 'level': 85, 'frameworks': ['SQL Server', 'MySQL', 'PostgreSQL']}
                 ]
             },
             {
                 'category': 'Technologies & Tools',
                 'items': [
-                    {'name': 'Flask', 'level': 85},
-                    {'name': '.NET', 'level': 80},
-                    {'name': 'Git (GitHub/BitBucket/GitLab)', 'level': 85},
-                    {'name': 'Microsoft Office 365', 'level': 90}
+                    {'name': 'Flask', 'level': 85, 'frameworks': ['Jinja2', 'Werkzeug']},
+                    {'name': '.NET', 'level': 80, 'frameworks': ['WPF', 'WinForms']},
+                    {'name': 'Git (GitHub/BitBucket/GitLab)', 'level': 85, 'frameworks': []},
+                    {'name': 'Microsoft Office 365', 'level': 90, 'frameworks': []}
                 ]
             },
             {
                 'category': 'Cloud & Databases',
                 'items': [
-                    {'name': 'GCP', 'level': 75},
-                    {'name': 'Azure', 'level': 75},
-                    {'name': 'AWS', 'level': 70},
-                    {'name': 'Heroku', 'level': 80},
-                    {'name': 'SQL Server', 'level': 85},
-                    {'name': 'MySQL', 'level': 85},
-                    {'name': 'BigQuery', 'level': 80}
+                    {'name': 'GCP', 'level': 75, 'frameworks': ['Compute Engine', 'Cloud Functions']},
+                    {'name': 'Azure', 'level': 75, 'frameworks': ['Azure Functions', 'Azure SQL']},
+                    {'name': 'AWS', 'level': 70, 'frameworks': ['Lambda', 'EC2']},
+                    {'name': 'Heroku', 'level': 80, 'frameworks': []},
+                    {'name': 'SQL Server', 'level': 85, 'frameworks': []},
+                    {'name': 'MySQL', 'level': 85, 'frameworks': []},
+                    {'name': 'BigQuery', 'level': 80, 'frameworks': []}
                 ]
             },
             {
                 'category': 'AI & Data Science',
                 'items': [
-                    {'name': 'Machine Learning', 'level': 85},
-                    {'name': 'LangChain', 'level': 75},
-                    {'name': 'Data Analysis', 'level': 80}
+                    {'name': 'Machine Learning', 'level': 85, 'frameworks': ['Scikit-learn', 'TensorFlow', 'PyTorch']},
+                    {'name': 'LangChain', 'level': 75, 'frameworks': []},
+                    {'name': 'Data Analysis', 'level': 80, 'frameworks': ['Pandas', 'NumPy', 'Matplotlib']}
                 ]
             },
             {
                 'category': 'Soft Skills',
                 'items': [
-                    {'name': 'Agile Methodology', 'level': 85},
-                    {'name': 'Teamwork', 'level': 90},
-                    {'name': 'Adaptability', 'level': 85},
-                    {'name': 'Self-Learning', 'level': 90}
+                    {'name': 'Agile Methodology', 'level': 85, 'frameworks': []},
+                    {'name': 'Teamwork', 'level': 90, 'frameworks': []},
+                    {'name': 'Adaptability', 'level': 85, 'frameworks': []},
+                    {'name': 'Self-Learning', 'level': 90, 'frameworks': []}
                 ]
             },
             {
                 'category': 'Languages',
                 'items': [
-                    {'name': 'French', 'level': 95},
-                    {'name': 'English', 'level': 75},
-                    {'name': 'Malagasy', 'level': 100}
+                    {'name': 'French', 'level': 95, 'frameworks': []},
+                    {'name': 'English', 'level': 75, 'frameworks': []},
+                    {'name': 'Malagasy', 'level': 100, 'frameworks': []}
                 ]
             }
         ]
-
 
 class Education:
     """Model for education history"""
