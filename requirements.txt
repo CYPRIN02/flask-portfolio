@@ -314,12 +314,12 @@ streamlit==1.36.0
 style==1.1.0
 sympy==1.12
 tenacity==8.2.3
-tensorboard==2.13.0
-tensorboard-data-server==0.7.1
-tensorflow==2.13.0
-tensorflow-estimator==2.13.0
-tensorflow-intel==2.13.0
-tensorflow-io-gcs-filesystem==0.31.0
+# tensorboard==2.13.0
+# tensorboard-data-server==0.7.1
+# tensorflow==2.13.0
+# tensorflow-estimator==2.13.0
+# tensorflow-intel==2.13.0
+# tensorflow-io-gcs-filesystem==0.31.0
 termcolor==2.3.0
 terminado==0.18.1
 thinc==8.2.1
