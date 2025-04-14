@@ -304,6 +304,7 @@ SQLAlchemy==1.4.41
 SQLAlchemy-Utils==0.38.3
 sqlalchemy2-stubs==0.0.2a38
 sqlmodel==0.0.8
+supabase==1.0.3
 # sqlparse==0.5.0
 # srsly==2.4.8
 # sse-starlette==2.2.1
