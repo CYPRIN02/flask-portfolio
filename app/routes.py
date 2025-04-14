@@ -10,6 +10,10 @@ from app.notifications import send_contact_notification
 # from flask_limiter.util import get_remote_address
 # limiter = Limiter(key_func=get_remote_address)
 
+
+from app.utils.storage import get_supabase_public_url
+
+
 def init_routes(app):
     """Initialise toutes les routes de l'application"""
     
@@ -22,6 +26,12 @@ def init_routes(app):
         """Route de la page d'accueil"""
         projects = Project.get_featured_projects()
         skills = Skill.get_all_skills()
+
+        # Ajout les liens publics d'image Supabase
+        for project in projects:
+            if project.get("image"):
+                project["image_url"] = get_supabase_public_url(f"uploads/{project['image']}")
+
         return render_template('index.html', 
                              title='Home', 
                              projects=projects, 
