@@ -39,7 +39,7 @@
 <!-- Project Image -->
 <section class="project-image mb-5">
     <div class="card shadow-sm">
-        <img src="{{ url_for('static', filename='images/' + project.image) }}" class="card-img-top" alt="{{ project.title }}">
+        <img src="{{ project.image_url }}" class="card-img-top" alt="{{ project.title }}">
     </div>
 </section>
 

@@ -17,7 +17,7 @@ class Config:
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     MAIL_DEFAULT_SENDER = os.environ.get('MAIL_DEFAULT_SENDER')
-    MAIL_USERNAME = os.environ.get('ADMIN_EMAIL')
+    ADMIN_EMAIL = os.environ.get('ADMIN_EMAIL')
     
     # Airtable configuration
     AIRTABLE_BASE_ID = os.environ.get('AIRTABLE_BASE_ID') or 'apphCq9dOEExpWKrf'

@@ -1,7 +1,0 @@
-This is a placeholder for project3.jpg
-
-Project: Emotion Detection in Video
-
-Please replace this file with an actual image related to emotion detection, facial recognition, computer vision, or video analysis. The image should be named project3.jpg and placed in this directory.
-
-Recommended image dimensions: 800x600 pixels
