@@ -119,7 +119,7 @@ grpcio-status==1.62.3
 gunicorn==21.2.0
 h11==0.14.0
 h5py==3.9.0
-httpcore==1.0.2
+httpcore==0.16.3
 httplib2==0.19.1
 httptools==0.6.1
 httpx==0.23.3
