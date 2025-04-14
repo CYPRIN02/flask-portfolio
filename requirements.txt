@@ -197,11 +197,11 @@ notebook_shim==0.2.4
 numpy==1.24.3
 nvidia-ml-py==11.525.150
 oauthlib==3.2.2
-opencv-contrib-python==4.8.0.74
-opencv-python==4.8.0.74
-openllm==0.4.41
-openllm-client==0.4.41
-openllm-core==0.4.41
+# opencv-contrib-python==4.8.0.74
+# opencv-python==4.8.0.74
+# openllm==0.4.41
+# openllm-client==0.4.41
+# openllm-core==0.4.41
 # opentelemetry-api==1.24.0
 # opentelemetry-exporter-otlp-proto-common==1.24.0
 # opentelemetry-exporter-otlp-proto-grpc==1.24.0
