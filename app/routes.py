@@ -2,7 +2,7 @@ from flask import render_template, flash, redirect, url_for, request, current_ap
 from flask_mail import Message
 from datetime import datetime
 from app.models import Project, Skill, Education, Experience
-from app.utils import submit_to_airtable
+from app.airtable_utils  import submit_to_airtable
 from app.notifications import send_contact_notification
 
 # Initialisation de Flask-Limiter (décommenter si nécessaire)
