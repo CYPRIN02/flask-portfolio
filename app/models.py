@@ -1,8 +1,13 @@
 import datetime
-
+# from app.utils.storage import get_supabase_public_url
 
 class Project:
     """Model for portfolio projects"""
+
+    # def __init__(self, title, image_filename, image_url ):
+    #     self.title = title
+    #     self.image_filename = image_filename
+    #     self.image_url = get_supabase_public_url(image_filename) 
     
     @staticmethod
     def get_all_projects():
@@ -12,6 +17,7 @@ class Project:
                 'id': 1,
                 'title': 'Web Scraping & Product Classification',
                 'description': 'Application web for scraping and predicting product classification using machine learning techniques. Developed during my apprenticeship at ESGI.',
+                'image_url': 'https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/page_sublimpick.jpg',
                 'technologies': ['Python', 'Flask', 'BigQuery', 'Machine Learning', 'Web Scraping', 'GCP'],
                 'image': 'page_sublimpick.jpg',
                 'github_url': 'https://github.com/CYPRIN02/projet_annuel_5IABD_sublimpick',
@@ -22,6 +28,7 @@ class Project:
                 'id': 2,
                 'title': 'Spam Detection Web Application',
                 'description': 'Web application that uses machine learning algorithms to detect spam messages. Built with Python and Flask, with a user-friendly interface for real-time spam detection.',
+                'image_url': 'https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/page_spam_detection.jpg',
                 'technologies': ['Python', 'Flask', 'Machine Learning', 'NLP', 'HTML/CSS'],
                 'image': 'page_spam_detection.jpg',
                 'github_url': 'https://github.com/CYPRIN02/projet_annuel_5IABD/tree/master',
@@ -32,6 +39,7 @@ class Project:
                 'id': 3,
                 'title': 'Emotion Detection in Video',
                 'description': 'Application that analyzes video content to detect and classify emotions in real-time. Uses computer vision and deep learning techniques to identify facial expressions.',
+                'image_url': 'https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/page_sublimpick.jpg',
                 'technologies': ['Python', 'Flask', 'Computer Vision', 'Deep Learning', 'OpenCV'],
                 'image': 'page_accueille_analyse_video_pa4.jpg',
                 'github_url': 'https://github.com/CYPRIN02/projet_annuel4iabd',
@@ -40,7 +48,7 @@ class Project:
             },
             {
                 'id': 4,
-                'title': 'Find Your Cours - Formation LangChain',
+                'title': 'Find Your Course - Formation LangChain',
                 'description': '''
                     Cours synthétique sur LangChain basé sur les dernières recherches (2022-2023).
                     Intègre des ressources pédagogiques de deeplearning.ai et la documentation officielle.
@@ -50,6 +58,7 @@ class Project:
                     - Cas pratiques avec LLMs (GPT-3.5, Llama 2)
                     - Bonnes pratiques de sécurité et déploiement
                 ''',
+                'image_url': 'https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/langchain-course.jpg',
                 'technologies': [
                     'Python', 
                     'LangChain', 
@@ -78,6 +87,7 @@ class Project:
                 'id': 5,
                 'title': 'Flight Reservation Website',
                 'description': 'Web application for booking flights, developed as a university project. Includes user authentication, flight search, and booking management.',
+                'image_url': 'https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/page_bdd_L3.jpg',
                 'technologies': ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
                 'image': 'page_bdd_L3.jpg',
                 'github_url': 'https://github.com/uvsq-versailles/flight-reservation',
@@ -88,6 +98,7 @@ class Project:
                 'id': 6,
                 'title': 'Chess Game',
                 'description': 'Chess game implementation with Java, featuring a graphical user interface, move validation, and basic AI opponent.',
+                'image_url': 'https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/page_chess.jpg',
                 'technologies': ['Python', 'Pygame'],
                 'image': 'page_chess.jpg',
                 'github_url': 'https://github.com/CYPRIN02/echec/tree/master',
