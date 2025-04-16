@@ -39,7 +39,7 @@ class Project:
                 'id': 3,
                 'title': 'Emotion Detection in Video',
                 'description': 'Application that analyzes video content to detect and classify emotions in real-time. Uses computer vision and deep learning techniques to identify facial expressions.',
-                'image_url': 'https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/page_sublimpick.jpg',
+                'image_url': 'https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/page_accueille_analyse_video_pa4.jpg',
                 'technologies': ['Python', 'Flask', 'Computer Vision', 'Deep Learning', 'OpenCV'],
                 'image': 'page_accueille_analyse_video_pa4.jpg',
                 'github_url': 'https://github.com/CYPRIN02/projet_annuel4iabd',
@@ -122,69 +122,6 @@ class Project:
         return None
 
 
-# class Skill:
-#     """Model for skills"""
-    
-#     @staticmethod
-#     def get_all_skills():
-#         """Return all skills (based on CV)"""
-#         return [
-#             {
-#                 'category': 'Programming Languages',
-#                 'items': [
-#                     {'name': 'Python', 'level': 90},
-#                     {'name': 'C#', 'level': 85},
-#                     {'name': 'HTML/CSS/JavaScript', 'level': 80},
-#                     {'name': 'SQL', 'level': 85}
-#                 ]
-#             },
-#             {
-#                 'category': 'Technologies & Tools',
-#                 'items': [
-#                     {'name': 'Flask', 'level': 85},
-#                     {'name': '.NET', 'level': 80},
-#                     {'name': 'Git (GitHub/BitBucket/GitLab)', 'level': 85},
-#                     {'name': 'Microsoft Office 365', 'level': 90}
-#                 ]
-#             },
-#             {
-#                 'category': 'Cloud & Databases',
-#                 'items': [
-#                     {'name': 'GCP', 'level': 75},
-#                     {'name': 'Azure', 'level': 75},
-#                     {'name': 'AWS', 'level': 70},
-#                     {'name': 'Heroku', 'level': 80},
-#                     {'name': 'SQL Server', 'level': 85},
-#                     {'name': 'MySQL', 'level': 85},
-#                     {'name': 'BigQuery', 'level': 80}
-#                 ]
-#             },
-#             {
-#                 'category': 'AI & Data Science',
-#                 'items': [
-#                     {'name': 'Machine Learning', 'level': 85},
-#                     {'name': 'LangChain', 'level': 75},
-#                     {'name': 'Data Analysis', 'level': 80}
-#                 ]
-#             },
-#             {
-#                 'category': 'Soft Skills',
-#                 'items': [
-#                     {'name': 'Agile Methodology', 'level': 85},
-#                     {'name': 'Teamwork', 'level': 90},
-#                     {'name': 'Adaptability', 'level': 85},
-#                     {'name': 'Self-Learning', 'level': 90}
-#                 ]
-#             },
-#             {
-#                 'category': 'Languages',
-#                 'items': [
-#                     {'name': 'French', 'level': 95},
-#                     {'name': 'English', 'level': 75},
-#                     {'name': 'Malagasy', 'level': 100}
-#                 ]
-#             }
-#         ]
 class Skill:
     """Model for skills"""
     
@@ -355,3 +292,58 @@ class Message:
         {message['content']}
         ----------------------------
         """
+    
+class GalleryItem:
+    def __init__(self, title, description, media_url, media_type='image', tags=None, date=None):
+        self.title = title
+        self.description = description
+        self.media_url = media_url
+        self.media_type = media_type  # 'image' ou 'video'
+        self.tags = tags or []
+        self.date = date or datetime.now()
+
+    @staticmethod
+    def get_all_items():
+        return [
+            GalleryItem(
+                title="Five Foot Esgi",
+                description="2nd place tournoi Ecole Paris",
+                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/coup-tournoi.jpg",
+                media_type="image",
+                tags=["AI", "Hackathon", "Award"],
+                date=datetime.datetime(2024, 3, 20)
+            ),
+            GalleryItem(
+                title="workspace bpce",
+                description="my prefer place on openspace.",
+                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/workspace.jpg",
+                media_type="image",
+                tags=["Interview", "Media", "English"],
+                date=datetime.datetime(2023, 10, 15)
+            ),
+            # Add more...
+            GalleryItem(
+                title="elevator bpce",
+                description="je prends au moins une photo quand on est seul.",
+                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/bpce-levator.jpg",
+                media_type="image",
+                tags=["Interview", "Media", "English"],
+                date=datetime.datetime(2023, 10, 15)
+            ),
+            GalleryItem(
+                title="mcdo-chill",
+                description="Temps de pause au macdo.",
+                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/mcdo.jpg",
+                media_type="image",
+                tags=["Interview", "Media", "English"],
+                date=datetime.datetime(2023, 10, 15)
+            ),
+            GalleryItem(
+                title="video test",
+                description="Clip from YouTube explaining my research.",
+                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/2025-04-15-181140176.mp4",
+                media_type="video",
+                tags=["Interview", "Media", "English"],
+                date=datetime.datetime(2023, 10, 15)
+            ),
+        ]

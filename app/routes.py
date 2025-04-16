@@ -1,7 +1,7 @@
 from flask import render_template, flash, redirect, url_for, request, current_app
 from flask_mail import Message
 from datetime import datetime
-from app.models import Project, Skill, Education, Experience
+from app.models import Project, Skill, Education, Experience, GalleryItem
 from app.airtable_utils  import submit_to_airtable
 from app.notifications import send_contact_notification
 
@@ -110,6 +110,15 @@ def init_routes(app):
         return render_template('contact.html', 
                             title='Contact', 
                             now=datetime.now())
+
+
+
+    @app.route('/gallery')
+    def gallery():
+        items = GalleryItem.get_all_items()
+        return render_template('gallery.html', title="Gallery", items=items, now=datetime.now())
+
+
 
     @app.route('/test-mail')
     def test_mail():

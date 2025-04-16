@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+{% block title %}Gallery{% endblock %}
+
+{% block content %}
+<section class="gallery py-5">
+    <div class="text-center mb-5">
+        <h1>Gallery of My Journey</h1>
+        <p class="lead">Explore the key moments that define my path.</p>
+    </div>
+
+    <!-- Filter -->
+    <div class="text-center mb-4">
+        <button class="btn btn-outline-primary me-2 active" data-filter="all">All</button>
+        {% for tag in ['AI', 'Hackathon', 'Award', 'Interview', 'English', 'Media'] %}
+        <button class="btn btn-outline-secondary me-2" data-filter="{{ tag }}">{{ tag }}</button>
+        {% endfor %}
+    </div>
+
+    <!-- Loader -->
+    <div id="gallery-loader" class="text-center my-5">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="row gallery-grid" style="display: none;">
+        {% for item in items %}
+        <div class="col-md-6 col-lg-4 mb-4 gallery-item" data-tags="{{ ' '.join(item.tags) }}">
+            <div class="card h-100 shadow-sm">
+                {% if item.media_type == 'image' %}
+                    <a href="{{ item.media_url }}" data-lightbox="gallery" data-title="{{ item.title }} - {{ item.description }}">
+                        <img src="{{ item.media_url }}" class="card-img-top" alt="{{ item.title }}">
+                    </a>
+                {% elif item.media_type == 'video' %}
+                    <video class="card-img-top" controls muted style="width: 100%; border-radius: 5px;">
+                        <source src="{{ item.media_url }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.title }}</h5>
+                    <p class="card-text">{{ item.description }}</p>
+                    <div class="small text-muted">{{ item.date.strftime('%Y-%m-%d') }}</div>
+                    <div class="mt-2">
+                        {% for tag in item.tags %}
+                        <span class="badge bg-secondary">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<!-- Lightbox2 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Hide loader and show gallery
+    setTimeout(() => {
+        document.getElementById('gallery-loader').style.display = 'none';
+        document.querySelector('.gallery-grid').style.display = 'flex';
+    }, 1000);
+
+    // Filtering logic
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            const filter = this.getAttribute('data-filter');
+
+            document.querySelectorAll('.gallery-item').forEach(card => {
+                const tags = card.getAttribute('data-tags');
+                if (filter === 'all' || tags.includes(filter)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
+{% endblock %}
