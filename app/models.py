@@ -346,6 +346,15 @@ class GalleryItem:
                 tags=["Interview", "Media", "English"],
                 date=datetime.datetime(1999, 10, 15)
             ),
+            
+            GalleryItem(
+                title="video test",
+                description="Clip from YouTube explaining my research.",
+                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/presentation-profil.mp4",
+                media_type="video",
+                tags=["Interview", "Media"],
+                date=datetime.datetime(1999, 10, 15)
+            ),
             GalleryItem(
                 title="Cadeau dédicacé",
                 description="Après dernier repas avec collègue de travail",
@@ -355,7 +364,55 @@ class GalleryItem:
                 date=datetime.datetime(2024, 9, 5)
             ),
             GalleryItem(
-                title="Fin L1 Lens",
+                title="Diplôme au Grand Rex",
+                description="Photo prise lors de la cérémonie de remise des diplômes au Grand Rex",
+                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/diploma-1.jpg",
+                media_type="image",
+                tags=["Award"],
+                date=datetime.datetime(2025, 5, 24)
+            ),
+            GalleryItem(
+                title="Diplôme",
+                description="Mon diplôme de Master en Intelligence Artificielle et Big Data",
+                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/diploma.jpg",
+                media_type="image",
+                tags=["Award"],
+                date=datetime.datetime(2025, 5, 24)
+            ),
+            GalleryItem(
+                title="Diplôme Tour Eiffel",
+                description="Photo prise devant la Tour Eiffel avec mon diplôme",
+                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/diploma-tour-eifel.jpg",
+                media_type="image",
+                tags=["Award"],
+                date=datetime.datetime(2025, 5, 24)
+            ),
+            GalleryItem(
+                title="Gala remise de diplôme",
+                description="photo prise lors du gala de remise de diplôme",
+                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/gala.jpg",
+                media_type="image",
+                tags=["Award"],
+                date=datetime.datetime(2025, 5, 24)
+            ),
+            GalleryItem(
+                title="Lycée Sainte Jeanne d'Arc",
+                description="Lycée que j'ai étudié à Majunga, Madagascar",
+                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/sja.jpg",
+                media_type="image",
+                tags=["Ecole"],
+                date=datetime.datetime(2025, 5, 7)
+            ),
+            GalleryItem(
+                title="Université d'Antananarivo",
+                description="Université que j'ai étudié à Antananarivo, Madagascar",
+                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/univ-ankatso.jpg",
+                media_type="image",
+                tags=["Ecole"],
+                date=datetime.datetime(2017, 4, 10)
+            ),
+            GalleryItem(
+                title="Fin Première année en licence à Lens",
                 description="Photo devant l'université d'Artois Lens",
                 media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/fin-annee-lens.jpg",
                 media_type="image",
@@ -399,7 +456,64 @@ class GalleryItem:
                 description="Aquaboulevard balade",
                 media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/ski-water.mp4",
                 media_type="video",
-                tags=["Loisir", "Media"],
+                tags=["Holiday", "Media"],
                 date=datetime.datetime(2024, 8, 11)
             ),
+            GalleryItem(
+                title="Vacances à Majunga",
+                description="Vacances à Majunga, Madagascar",
+                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/vacance1.jpg",
+                media_type="image",
+                tags=["Holiday", "Media"],
+                date=datetime.datetime(2025, 5, 10)
+            ),
+            GalleryItem(
+                title="Couché de soleil Maroala",
+                description="Vacances à Majunga, Madagascar",
+                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/vacance2.jpg",
+                media_type="image",
+                tags=["Holiday", "Media"],
+                date=datetime.datetime(2025, 5, 10)
+            ),
+            GalleryItem(
+                title="Hôtel Antsahavaky Chez Narindra",
+                description="Vacances à Majunga, Madagascar",
+                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/vacance3.jpg",
+                media_type="image",
+                tags=["Holiday", "Media"],
+                date=datetime.datetime(2025, 5, 10)
+            ),
+            GalleryItem(
+                title="Ravinala Antsanitia",
+                description="Vacances à Majunga, Madagascar",
+                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/vacance4.jpg",
+                media_type="image",
+                tags=["Holiday", "Media"],
+                date=datetime.datetime(2025, 5, 10)
+            ),
+            GalleryItem(
+                title="Plage Antsanitia",
+                description="Vacances à Majunga, Madagascar",
+                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/vacance5.jpg",
+                media_type="image",
+                tags=["Holiday", "Media"],
+                date=datetime.datetime(2025, 5, 10)
+            ),
+            GalleryItem(
+                title="Maki au lac Sacré",
+                description="Vacances à Majunga, Madagascar",
+                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/vacance6.jpg",
+                media_type="image",
+                tags=["Holiday", "Media"],
+                date=datetime.datetime(2025, 5, 10)
+            ),
+            GalleryItem(
+                title="Ampefy lac",
+                description="Vacances à Majunga, Madagascar",
+                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/vacance7.jpg",
+                media_type="image",
+                tags=["Holiday", "Media"],
+                date=datetime.datetime(2025, 5, 10)
+            ),
+            
         ]
