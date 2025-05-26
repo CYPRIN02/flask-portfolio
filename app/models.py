@@ -310,7 +310,7 @@ class GalleryItem:
                 description="2nd place tournoi Ecole Paris",
                 media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/coup-tournoi.jpg",
                 media_type="image",
-                tags=["AI", "Hackathon", "Award"],
+                tags=["Loisir", "Award"],
                 date=datetime.datetime(2024, 3, 20)
             ),
             GalleryItem(
@@ -318,25 +318,25 @@ class GalleryItem:
                 description="my prefer place on openspace.",
                 media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/workspace.jpg",
                 media_type="image",
-                tags=["Interview", "Media", "English"],
+                tags=["Work", "Media"],
                 date=datetime.datetime(2023, 10, 15)
             ),
             # Add more...
             GalleryItem(
                 title="elevator bpce",
-                description="je prends au moins une photo quand on est seul.",
+                description="je prends au moins une photo quand je suis seul.",
                 media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/bpce-levator.jpg",
                 media_type="image",
-                tags=["Interview", "Media", "English"],
-                date=datetime.datetime(2023, 10, 15)
+                tags=["Work"],
+                date=datetime.datetime(2024, 10, 10)
             ),
             GalleryItem(
                 title="mcdo-chill",
                 description="Temps de pause au macdo.",
                 media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/mcdo.jpg",
                 media_type="image",
-                tags=["Interview", "Media", "English"],
-                date=datetime.datetime(2023, 10, 15)
+                tags=["Media"],
+                date=datetime.datetime(2022, 6, 14)
             ),
             GalleryItem(
                 title="video test",
@@ -344,6 +344,62 @@ class GalleryItem:
                 media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/2025-04-15-181140176.mp4",
                 media_type="video",
                 tags=["Interview", "Media", "English"],
-                date=datetime.datetime(2023, 10, 15)
+                date=datetime.datetime(1999, 10, 15)
+            ),
+            GalleryItem(
+                title="Cadeau dédicacé",
+                description="Après dernier repas avec collègue de travail",
+                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/dedicace-ping.jpg",
+                media_type="image",
+                tags=["Award"],
+                date=datetime.datetime(2024, 9, 5)
+            ),
+            GalleryItem(
+                title="Fin L1 Lens",
+                description="Photo devant l'université d'Artois Lens",
+                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/fin-annee-lens.jpg",
+                media_type="image",
+                tags=["Ecole", "Award"],
+                date=datetime.datetime(2018, 6, 2)
+            ),
+            GalleryItem(
+                title="Foot Dumotel Cachan",
+                description="Rien m'empêche de jouer au foot",
+                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/foot-neige.jpg",
+                media_type="image",
+                tags=["AI", "Hackathon", "Award"],
+                date=datetime.datetime(2021, 11, 20)
+            ),
+            GalleryItem(
+                title="Fêter la validation de diplôme Master",
+                description="Jour +1 de la validation de diplôme Master ",
+                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/jour-validation-diplo.jpg",
+                media_type="image",
+                tags=["AI", "Hackathon", "Award"],
+                date=datetime.datetime(2024, 12, 3)
+            ),
+            GalleryItem(
+                title="Bpce Paris 13",
+                description="Lieu de Travail",
+                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/lieu-travail.jpg",
+                media_type="image",
+                tags=["AI", "Hackathon", "Award"],
+                date=datetime.datetime(2024, 5, 7)
+            ),
+            GalleryItem(
+                title="Cadeau",
+                description="Cadeau donné par mes collègues de travail",
+                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/cadeau-ping.jpg",
+                media_type="image",
+                tags=["AI", "Hackathon", "Award"],
+                date=datetime.datetime(2024, 9, 5)
+            ),
+            GalleryItem(
+                title="Ski loisir",
+                description="Aquaboulevard balade",
+                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/ski-water.mp4",
+                media_type="video",
+                tags=["Loisir", "Media"],
+                date=datetime.datetime(2024, 8, 11)
             ),
         ]
