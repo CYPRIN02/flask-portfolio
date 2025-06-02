@@ -335,25 +335,17 @@ class GalleryItem:
                 description="Temps de pause au macdo.",
                 media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/mcdo.jpg",
                 media_type="image",
-                tags=["Media"],
+                tags=["Work"],
                 date=datetime.datetime(2022, 6, 14)
-            ),
-            GalleryItem(
-                title="video test",
-                description="Clip from YouTube explaining my research.",
-                media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/2025-04-15-181140176.mp4",
-                media_type="video",
-                tags=["Interview", "Media", "English"],
-                date=datetime.datetime(1999, 10, 15)
             ),
             
             GalleryItem(
-                title="video test",
-                description="Clip from YouTube explaining my research.",
+                title="Présentation profil",
+                description="Présentation de mon profil professionnel",
                 media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/presentation-profil.mp4",
                 media_type="video",
                 tags=["Interview", "Media"],
-                date=datetime.datetime(1999, 10, 15)
+                date=datetime.datetime(2025, 4, 30)
             ),
             GalleryItem(
                 title="Cadeau dédicacé",
@@ -424,7 +416,7 @@ class GalleryItem:
                 description="Rien m'empêche de jouer au foot",
                 media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/foot-neige.jpg",
                 media_type="image",
-                tags=["AI", "Hackathon", "Award"],
+                tags=["Media"],
                 date=datetime.datetime(2021, 11, 20)
             ),
             GalleryItem(
@@ -432,7 +424,7 @@ class GalleryItem:
                 description="Jour +1 de la validation de diplôme Master ",
                 media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/jour-validation-diplo.jpg",
                 media_type="image",
-                tags=["AI", "Hackathon", "Award"],
+                tags=["AI", "Award"],
                 date=datetime.datetime(2024, 12, 3)
             ),
             GalleryItem(
@@ -440,7 +432,7 @@ class GalleryItem:
                 description="Lieu de Travail",
                 media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/lieu-travail.jpg",
                 media_type="image",
-                tags=["AI", "Hackathon", "Award"],
+                tags=["Work"],
                 date=datetime.datetime(2024, 5, 7)
             ),
             GalleryItem(
@@ -448,7 +440,7 @@ class GalleryItem:
                 description="Cadeau donné par mes collègues de travail",
                 media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/cadeau-ping.jpg",
                 media_type="image",
-                tags=["AI", "Hackathon", "Award"],
+                tags=["Work", "Award"],
                 date=datetime.datetime(2024, 9, 5)
             ),
             GalleryItem(
@@ -456,7 +448,7 @@ class GalleryItem:
                 description="Aquaboulevard balade",
                 media_url="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/ski-water.mp4",
                 media_type="video",
-                tags=["Holiday", "Media"],
+                tags=["Loisir", "Media"],
                 date=datetime.datetime(2024, 8, 11)
             ),
             GalleryItem(

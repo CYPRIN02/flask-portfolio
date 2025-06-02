@@ -21,7 +21,7 @@
                 I'm particularly interested in creating efficient, intelligent applications that leverage machine learning and data analysis. I enjoy working in collaborative environments where I can contribute my technical skills while continuing to learn and grow as a developer.
             </p>
             <div class="mt-4">
-                <a href="{{ url_for('static', filename='files/CV_RAP.pdf') }}" class="btn btn-primary me-2" target="_blank">
+                <a href="{{ url_for('static', filename='files/cv_rap_ref.pdf') }}" class="btn btn-primary me-2" target="_blank">
                     <i class="fas fa-download me-2"></i>Download Resume
                 </a>
                 <a href="{{ url_for('gallery') }}" class="btn btn-outline-primary me-2">
@@ -80,6 +80,13 @@
         {% endfor %}
     </div>
 </section>
+
+<section class="qr-section text-center my-5">
+    <h2 class="mb-3">Scan Me!</h2>
+    <p>Connectez-vous sur LinkedIn.</p>
+    <img src="{{ url_for('static', filename='images/qr_site.png') }}" alt="QR Code" class="img-fluid" width="180">
+</section>
+
 {% endblock %}
 
 {% block extra_css %}
@@ -118,6 +125,17 @@
     
     .timeline-content {
         padding-bottom: 10px;
+    }
+
+    .qr-section img {
+    border: 4px solid #007bff;
+    border-radius: 8px;
+    padding: 5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease;
+    }
+    .qr-section img:hover {
+        transform: scale(1.05);
     }
 </style>
 {% endblock %}
