@@ -7,7 +7,7 @@
 <section class="project-header py-5">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{{ url_for('projects') }}">Projects</a></li>
+            <li class="breadcrumb-item"><a href="{{ url_for('projects') }}">Projets</a></li>
             <li class="breadcrumb-item active" aria-current="page">{{ project.title }}</li>
         </ol>
     </nav>
@@ -23,12 +23,12 @@
             <div class="mb-4">
                 {% if project.github_url %}
                 <a href="{{ project.github_url }}" target="_blank" class="btn btn-dark me-2">
-                    <i class="fab fa-github me-2"></i>View on GitHub
+                    <i class="fab fa-github me-2"></i>Référentiel GitHub
                 </a>
                 {% endif %}
                 {% if project.live_url %}
                 <a href="{{ project.live_url }}" target="_blank" class="btn btn-primary">
-                    <i class="fas fa-external-link-alt me-2"></i>Live Demo
+                    <i class="fas fa-external-link-alt me-2"></i>Démo en direct
                 </a>
                 {% endif %}
             </div>
@@ -47,7 +47,7 @@
 <section class="project-description py-4">
     <div class="row">
         <div class="col-lg-8">
-            <h2 class="h3 mb-4">Project Overview</h2>
+            <h2 class="h3 mb-4">Aperçu du projet</h2>
             <p class="lead mb-4">{{ project.description }}</p>
             
             <!-- Extended description - in a real app, you would have more detailed content here -->

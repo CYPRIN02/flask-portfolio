@@ -27,13 +27,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == url_for('home') %}active{% endif %}" href="{{ url_for('home') }}">Home</a>
+                        <a class="nav-link {% if request.path == url_for('home') %}active{% endif %}" href="{{ url_for('home') }}">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == url_for('about') %}active{% endif %}" href="{{ url_for('about') }}">About</a>
+                        <a class="nav-link {% if request.path == url_for('about') %}active{% endif %}" href="{{ url_for('about') }}">À propos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == url_for('projects') %}active{% endif %}" href="{{ url_for('projects') }}">Projects</a>
+                        <a class="nav-link {% if request.path == url_for('projects') %}active{% endif %}" href="{{ url_for('projects') }}">Projets</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == url_for('contact') %}active{% endif %}" href="{{ url_for('contact') }}">Contact</a>
@@ -68,19 +68,19 @@
             <div class="row">
                 <div class="col-md-6">
                     <h5>Princy's Portfolio</h5>
-                    <p>A showcase of my skills, projects, and experience as a recent Master's graduate in AI and Big Data.</p>
+                    <p>Une vitrine de mes compétences,de mes projets et de mon expérience en tant que Jeune diplômé d'un Master en IA et Big Data.</p>
                 </div>
                 <div class="col-md-3">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="{{ url_for('home') }}" class="text-white">Home</a></li>
-                        <li><a href="{{ url_for('about') }}" class="text-white">About</a></li>
-                        <li><a href="{{ url_for('projects') }}" class="text-white">Projects</a></li>
+                        <li><a href="{{ url_for('home') }}" class="text-white">Accueil</a></li>
+                        <li><a href="{{ url_for('about') }}" class="text-white">À propos</a></li>
+                        <li><a href="{{ url_for('projects') }}" class="text-white">Projets</a></li>
                         <li><a href="{{ url_for('contact') }}" class="text-white">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
-                    <h5>Connect on :</h5>
+                    <h5>Connectez-vous sur :</h5>
                     <div class="social-links">
                         <a href="https://github.com/CYPRIN02" target="_blank" class="text-white me-2"><i class="fab fa-github fa-lg"></i></a>
                         <a href="https://www.linkedin.com/in/andrianantenaina-princy-r-649594151/" target="_blank" class="text-white me-2"><i class="fab fa-linkedin fa-lg"></i></a>
@@ -91,7 +91,7 @@
             </div>
             <hr>
             <div class="text-center">
-                <p>&copy; {{ now.year }} RASOLOARIVONY ANDRIANANTENAINA PRINCY. All rights reserved.</p>
+                <p>&copy; {{ now.year }} RASOLOARIVONY ANDRIANANTENAINA PRINCY. Tous droits réservés.</p>
             </div>
         </div>
     </footer>

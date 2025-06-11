@@ -130,7 +130,7 @@ class Skill:
         """Return all skills (based on CV)"""
         return [
             {
-                'category': 'Programming Languages',
+                'category': 'Langages de programmation',
                 'items': [
                     {'name': 'Python', 'level': 90, 'frameworks': ['Flask', 'Django', 'FastAPI']},
                     {'name': 'Csharp', 'level': 85, 'frameworks': ['.NET Core', 'ASP.NET', 'Entity Framework']},
@@ -139,7 +139,7 @@ class Skill:
                 ]
             },
             {
-                'category': 'Technologies & Tools',
+                'category': 'Technologies & Outils',
                 'items': [
                     {'name': 'Flask', 'level': 85, 'frameworks': ['Jinja2', 'Werkzeug']},
                     {'name': '.NET', 'level': 80, 'frameworks': ['WPF', 'WinForms']},
@@ -148,7 +148,7 @@ class Skill:
                 ]
             },
             {
-                'category': 'Cloud & Databases',
+                'category': 'Cloud & Bases de données',
                 'items': [
                     {'name': 'GCP', 'level': 75, 'frameworks': ['Compute Engine', 'Cloud Functions']},
                     {'name': 'Azure', 'level': 75, 'frameworks': ['Azure Functions', 'Azure SQL']},
@@ -160,7 +160,7 @@ class Skill:
                 ]
             },
             {
-                'category': 'AI & Data Science',
+                'category': 'Intelligence Artificielle & Big Data',
                 'items': [
                     {'name': 'Machine Learning', 'level': 85, 'frameworks': ['Scikit-learn', 'TensorFlow', 'PyTorch']},
                     {'name': 'LangChain', 'level': 75, 'frameworks': []},
@@ -168,7 +168,7 @@ class Skill:
                 ]
             },
             {
-                'category': 'Soft Skills',
+                'category': 'Compétences interpersonnelles',
                 'items': [
                     {'name': 'Agile Methodology', 'level': 85, 'frameworks': []},
                     {'name': 'Teamwork', 'level': 90, 'frameworks': []},
@@ -177,7 +177,7 @@ class Skill:
                 ]
             },
             {
-                'category': 'Languages',
+                'category': 'Langues',
                 'items': [
                     {'name': 'French', 'level': 95, 'frameworks': []},
                     {'name': 'English', 'level': 75, 'frameworks': []},
@@ -201,21 +201,21 @@ class Education:
                 'description': 'Specialized in AI and Big Data technologies. Completed program through apprenticeship at BPCE Solutions Informatiques.'
             },
             {
-                'degree': 'Master 1 in DataScale Computing',
+                'degree': 'Master 1 en DataScale Computing',
                 'institution': 'Université de Versailles',
                 'location': 'Versailles, France',
                 'period': 'Sept 2021 - Jul 2022',
                 'description': 'Focused on large-scale data processing and computing technologies.'
             },
             {
-                'degree': 'Bachelor in Computer Science',
+                'degree': 'Licence des Sciences et Technologies - Informatique',
                 'institution': 'Université de Versailles',
                 'location': 'Versailles, France',
                 'period': 'Sept 2018 - Jul 2021',
                 'description': 'Comprehensive computer science education with focus on programming and software development.'
             },
             {
-                'degree': 'First Year Computer Science',
+                'degree': 'Première année en Informatique',
                 'institution': 'Université d\'Artois',
                 'location': 'Lens, France',
                 'period': 'Sept 2017 - Jun 2018',
@@ -232,14 +232,14 @@ class Experience:
         """Return work experience (based on CV)"""
         return [
             {
-                'title': 'Développeur .NET (Apprenticeship)',
+                'title': 'Développeur .NET (Apprentissage)',
                 'company': 'BPCE Solutions Informatiques',
                 'location': 'France',
                 'period': 'Oct 2022 - Sept 2024',
                 'description': 'Maintained existing web applications through development and testing. Executed database queries. Analyzed back-end and front-end applications to propose solutions tailored to requirements. Deployed web applications including configuration, validation testing, integration, and deployment pipelines. Created technical documentation.'
             },
             {
-                'title': 'Développeur Web Apps IA & Big Data (Apprenticeship)',
+                'title': 'Développeur Web Apps IA & Big Data (Apprentissage)',
                 'company': 'ESGI',
                 'location': 'Paris, France',
                 'period': 'Sept 2022 - Dec 2024',
