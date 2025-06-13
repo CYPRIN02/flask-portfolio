@@ -5,9 +5,9 @@
 {% block content %}
 <!-- Contact Header -->
 <section class="contact-header py-5">
-    <h1 class="mb-4">Get In Touch</h1>
+    <h1 class="mb-4">Contactez-moi</h1>
     <p class="lead mb-5">
-        Have a question or want to work together? Feel free to reach out using the form below.
+        Vous avez une question ou souhaitez collaborer ? N'hésitez pas à me contacter via le formulaire ci-dessous.
     </p>
 </section>
 
@@ -17,11 +17,11 @@
         <div class="col-lg-7 mb-5 mb-lg-0">
             <div class="card shadow-sm">
                 <div class="card-body p-4">
-                    <h2 class="h4 mb-4">Send a Message</h2>
+                    <h2 class="h4 mb-4">Envoyer un message</h2>
                     <form method="POST" action="{{ url_for('contact') }}">
                         
                         <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
+                            <label for="name" class="form-label">Nom</label>
                             <input type="text" class="form-control" id="name" name="name" required>
                         </div>
                         <div class="mb-3">
@@ -29,14 +29,14 @@
                             <input type="email" class="form-control" id="email" name="email" required>
                         </div>
                         <div class="mb-3">
-                            <label for="subject" class="form-label">Subject</label>
+                            <label for="subject" class="form-label">Objet</label>
                             <input type="text" class="form-control" id="subject" name="subject" required>
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label">Message</label>
                             <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="btn btn-primary">Envoyer le message</button>
                     </form>
                 </div>
             </div>
@@ -45,7 +45,7 @@
         <div class="col-lg-5">
             <div class="card shadow-sm mb-4">
                 <div class="card-body p-4">
-                    <h2 class="h4 mb-4">Contact Information</h2>
+                    <h2 class="h4 mb-4">Informations de contact</h2>
                     <ul class="list-unstyled">
                         <li class="d-flex mb-4">
                             <div class="contact-icon me-3">
@@ -61,7 +61,7 @@
                                 <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
                             </div>
                             <div>
-                                <h3 class="h6 mb-1">Location</h3>
+                                <h3 class="h6 mb-1">Adresse</h3>
                                 <p class="mb-0">Cachan, 94230, France</p>
                             </div>
                         </li>
@@ -70,7 +70,7 @@
                                 <i class="fas fa-globe fa-2x text-primary"></i>
                             </div>
                             <div>
-                                <h3 class="h6 mb-1">Social Media</h3>
+                                <h3 class="h6 mb-1">Réseaux Sociaux</h3>
                                 <div class="social-links mt-2">
                                     <a href="https://github.com/CYPRIN02" target="_blank" class="me-3">
                                         <i class="fab fa-github fa-lg"></i>
@@ -91,12 +91,12 @@
             
             <div class="card shadow-sm">
                 <div class="card-body p-4">
-                    <h2 class="h4 mb-4">Availability</h2>
+                    <h2 class="h4 mb-4">Disponibilité</h2>
                     <p>
-                        I'm currently available for freelance work, full-time positions, and collaborative projects.
+                        Je suis actuellement disponible pour des missions freelance, des postes à temps plein et des projets collaboratifs.
                     </p>
                     <p class="mb-0">
-                        Response time: <span class="text-success">Within 24 hours</span>
+                        Délai de réponse : <span class="text-success">Dans les 24 heures</span>
                     </p>
                 </div>
             </div>

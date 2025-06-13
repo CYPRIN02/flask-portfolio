@@ -14,96 +14,96 @@ class Project:
         """Return all projects (based on CV)"""
         return [
             {
-                'id': 1,
-                'title': 'Web Scraping & Product Classification',
-                'description': 'Application web for scraping and predicting product classification using machine learning techniques. Developed during my apprenticeship at ESGI.',
-                'image_url': 'https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/page_sublimpick.jpg',
-                'technologies': ['Python', 'Flask', 'BigQuery', 'Machine Learning', 'Web Scraping', 'GCP'],
-                'image': 'page_sublimpick.jpg',
-                'github_url': 'https://github.com/CYPRIN02/projet_annuel_5IABD_sublimpick',
-                'live_url': None,
-                'featured': True
+            'id': 1,
+            'title': 'Web Scraping & Classification de Produits',
+            'description': "Application web pour le scraping et la prédiction de classification de produits à l'aide de techniques de machine learning. Développée durant mon apprentissage à l'ESGI.",
+            'image_url': 'https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/page_sublimpick.jpg',
+            'technologies': ['Python', 'Flask', 'BigQuery', 'Machine Learning', 'Web Scraping', 'GCP'],
+            'image': 'page_sublimpick.jpg',
+            'github_url': 'https://github.com/CYPRIN02/projet_annuel_5IABD_sublimpick',
+            'live_url': None,
+            'featured': True
             },
             {
-                'id': 2,
-                'title': 'Spam Detection Web Application',
-                'description': 'Web application that uses machine learning algorithms to detect spam messages. Built with Python and Flask, with a user-friendly interface for real-time spam detection.',
-                'image_url': 'https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/page_spam_detection.jpg',
-                'technologies': ['Python', 'Flask', 'Machine Learning', 'NLP', 'HTML/CSS'],
-                'image': 'page_spam_detection.jpg',
-                'github_url': 'https://github.com/CYPRIN02/projet_annuel_5IABD/tree/master',
-                'live_url': None,
-                'featured': True
+            'id': 2,
+            'title': 'Application Web de Détection de Spam',
+            'description': "Application web utilisant des algorithmes de machine learning pour détecter les messages indésirables (spam). Réalisée avec Python et Flask, avec une interface conviviale pour la détection en temps réel.",
+            'image_url': 'https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/page_spam_detection.jpg',
+            'technologies': ['Python', 'Flask', 'Machine Learning', 'NLP', 'HTML/CSS'],
+            'image': 'page_spam_detection.jpg',
+            'github_url': 'https://github.com/CYPRIN02/projet_annuel_5IABD/tree/master',
+            'live_url': None,
+            'featured': True
             },
             {
-                'id': 3,
-                'title': 'Emotion Detection in Video',
-                'description': 'Application that analyzes video content to detect and classify emotions in real-time. Uses computer vision and deep learning techniques to identify facial expressions.',
-                'image_url': 'https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/page_accueille_analyse_video_pa4.jpg',
-                'technologies': ['Python', 'Flask', 'Computer Vision', 'Deep Learning', 'OpenCV'],
-                'image': 'page_accueille_analyse_video_pa4.jpg',
-                'github_url': 'https://github.com/CYPRIN02/projet_annuel4iabd',
-                'live_url': None,
-                'featured': True
+            'id': 3,
+            'title': 'Détection d’Émotions dans la Vidéo',
+            'description': "Application qui analyse le contenu vidéo pour détecter et classifier les émotions en temps réel. Utilise la vision par ordinateur et le deep learning pour identifier les expressions faciales.",
+            'image_url': 'https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/page_accueille_analyse_video_pa4.jpg',
+            'technologies': ['Python', 'Flask', 'Computer Vision', 'Deep Learning', 'OpenCV'],
+            'image': 'page_accueille_analyse_video_pa4.jpg',
+            'github_url': 'https://github.com/CYPRIN02/projet_annuel4iabd',
+            'live_url': None,
+            'featured': True
             },
             {
-                'id': 4,
-                'title': 'Find Your Course - Formation LangChain',
-                'description': '''
-                    Cours synthétique sur LangChain basé sur les dernières recherches (2022-2023).
-                    Intègre des ressources pédagogiques de deeplearning.ai et la documentation officielle.
-                    Contenu clé :
-                    - Architecture modulaire de LangChain
-                    - Gestion des prompts et mémoires contextuelles
-                    - Cas pratiques avec LLMs (GPT-3.5, Llama 2)
-                    - Bonnes pratiques de sécurité et déploiement
-                ''',
-                'image_url': 'https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/langchain-course.jpg',
-                'technologies': [
-                    'Python', 
-                    'LangChain', 
-                    'LLMs', 
-                    'NLP', 
-                    'DeepLearning.ai',
-                    'Jupyter Notebook'
-                ],
-                'image': 'langchain-course.jpg',
-                'github_url': 'https://github.com/CYPRIN02/langchain-masterclass',
-                'live_url': None,
-                'featured': True,
-                'learning_resources': [
-                    {
-                        'name': 'LangChain Fundamentals Course',
-                        'url': 'https://learn.deeplearning.ai/courses/langchain',
-                        'author': 'Harrison Chase (Créateur de LangChain)'
-                    },
-                    {
-                        'name': 'Documentation Officielle',
-                        'url': 'https://python.langchain.com/'
-                    }
-                ]
+            'id': 4,
+            'title': 'Find Your Course - Formation LangChain',
+            'description': '''
+                Cours synthétique sur LangChain basé sur les dernières recherches (2022-2023).
+                Intègre des ressources pédagogiques de deeplearning.ai et la documentation officielle.
+                Contenu clé :
+                - Architecture modulaire de LangChain
+                - Gestion des prompts et mémoires contextuelles
+                - Cas pratiques avec LLMs (GPT-3.5, Llama 2)
+                - Bonnes pratiques de sécurité et déploiement
+            ''',
+            'image_url': 'https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/langchain-course.jpg',
+            'technologies': [
+                'Python',
+                'LangChain',
+                'LLMs',
+                'NLP',
+                'DeepLearning.ai',
+                'Jupyter Notebook'
+            ],
+            'image': 'langchain-course.jpg',
+            'github_url': 'https://github.com/CYPRIN02/langchain-masterclass',
+            'live_url': None,
+            'featured': True,
+            'learning_resources': [
+                {
+                'name': 'Cours Fondamentaux LangChain',
+                'url': 'https://learn.deeplearning.ai/courses/langchain',
+                'author': 'Harrison Chase (Créateur de LangChain)'
+                },
+                {
+                'name': 'Documentation Officielle',
+                'url': 'https://python.langchain.com/'
+                }
+            ]
             },
             {
-                'id': 5,
-                'title': 'Flight Reservation Website',
-                'description': 'Web application for booking flights, developed as a university project. Includes user authentication, flight search, and booking management.',
-                'image_url': 'https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/page_bdd_L3.jpg',
-                'technologies': ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
-                'image': 'page_bdd_L3.jpg',
-                'github_url': 'https://github.com/uvsq-versailles/flight-reservation',
-                'live_url': None,
-                'featured': False
+            'id': 5,
+            'title': 'Site de Réservation de Vols',
+            'description': "Application web pour réserver des vols, développée comme projet universitaire. Inclut l'authentification utilisateur, la recherche de vols et la gestion des réservations.",
+            'image_url': 'https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/page_bdd_L3.jpg',
+            'technologies': ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
+            'image': 'page_bdd_L3.jpg',
+            'github_url': 'https://github.com/uvsq-versailles/flight-reservation',
+            'live_url': None,
+            'featured': False
             },
             {
-                'id': 6,
-                'title': 'Chess Game',
-                'description': 'Chess game implementation with Java, featuring a graphical user interface, move validation, and basic AI opponent.',
-                'image_url': 'https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/page_chess.jpg',
-                'technologies': ['Python', 'Pygame'],
-                'image': 'page_chess.jpg',
-                'github_url': 'https://github.com/CYPRIN02/echec/tree/master',
-                'live_url': None,
-                'featured': False
+            'id': 6,
+            'title': 'Jeu d’Échecs',
+            'description': "Implémentation d'un jeu d'échecs en Java, avec interface graphique, validation des coups et adversaire IA basique.",
+            'image_url': 'https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/page_chess.jpg',
+            'technologies': ['Python', 'Pygame'],
+            'image': 'page_chess.jpg',
+            'github_url': 'https://github.com/CYPRIN02/echec/tree/master',
+            'live_url': None,
+            'featured': False
             }
         ]
     
@@ -194,32 +194,32 @@ class Education:
         """Return education history (based on CV)"""
         return [
             {
-                'degree': 'Master in Artificial Intelligence and Big Data',
-                'institution': 'ESGI',
-                'location': 'Paris, France',
-                'period': 'Sept 2022 - Dec 2024',
-                'description': 'Specialized in AI and Big Data technologies. Completed program through apprenticeship at BPCE Solutions Informatiques.'
+            'degree': 'Master Intelligence Artificielle et Big Data',
+            'institution': 'ESGI',
+            'location': 'Paris, France',
+            'period': 'Sept 2022 - Déc 2024',
+            'description': 'Spécialisation en intelligence artificielle et technologies Big Data. En alternance chez BPCE Solutions Informatiques en tant qu\'analyste développeur .Net.'
             },
             {
-                'degree': 'Master 1 en DataScale Computing',
-                'institution': 'Université de Versailles',
-                'location': 'Versailles, France',
-                'period': 'Sept 2021 - Jul 2022',
-                'description': 'Focused on large-scale data processing and computing technologies.'
+            'degree': 'Master 1 DataScale Computing',
+            'institution': 'Université de Versailles',
+            'location': 'Versailles, France',
+            'period': 'Sept 2021 - Juil 2022',
+            'description': 'Centrée sur le traitement et le calcul de données à grande échelle.'
             },
             {
-                'degree': 'Licence des Sciences et Technologies - Informatique',
-                'institution': 'Université de Versailles',
-                'location': 'Versailles, France',
-                'period': 'Sept 2018 - Jul 2021',
-                'description': 'Comprehensive computer science education with focus on programming and software development.'
+            'degree': 'Licence Sciences et Technologies - Informatique',
+            'institution': 'Université de Versailles',
+            'location': 'Versailles, France',
+            'period': 'Sept 2018 - Juil 2021',
+            'description': 'Formation complète en informatique avec un accent sur la programmation et le développement logiciel.'
             },
             {
-                'degree': 'Première année en Informatique',
-                'institution': 'Université d\'Artois',
-                'location': 'Lens, France',
-                'period': 'Sept 2017 - Jun 2018',
-                'description': 'Foundational studies in computer science before transferring to Université de Versailles.'
+            'degree': 'Première année en Informatique',
+            'institution': "Université d'Artois",
+            'location': 'Lens, France',
+            'period': 'Sept 2017 - Juin 2018',
+            'description': "Études fondamentales en informatique avant le transfert à l'Université de Versailles."
             }
         ]
 
@@ -232,32 +232,39 @@ class Experience:
         """Return work experience (based on CV)"""
         return [
             {
-                'title': 'Développeur .NET (Apprentissage)',
-                'company': 'BPCE Solutions Informatiques',
-                'location': 'France',
-                'period': 'Oct 2022 - Sept 2024',
-                'description': 'Maintained existing web applications through development and testing. Executed database queries. Analyzed back-end and front-end applications to propose solutions tailored to requirements. Deployed web applications including configuration, validation testing, integration, and deployment pipelines. Created technical documentation.'
+            'title': 'Création Portfolio Personnel (Projet Freelance)',
+            'company': 'Projet Personnel',
+            'location': 'En ligne',
+            'period': 'Fév 2025 - Juin 2025',
+            'description': "Conception et développement d'un site web personnel pour présenter mes réalisations et compétences en tant qu'Analyste Développeur. Ce projet a inclus la création du site, la gestion du flux d'informations entre le site et la base de données, la maintenance et le déploiement."
             },
             {
-                'title': 'Développeur Web Apps IA & Big Data (Apprentissage)',
-                'company': 'ESGI',
-                'location': 'Paris, France',
-                'period': 'Sept 2022 - Dec 2024',
-                'description': 'Developed web application for scraping and product classification prediction using Python, Flask, and BigQuery. Created spam detection web application with Python and Flask. Implemented emotion detection in video using Python and Flask. Utilized LangChain use cases and various cloud services (GCP/Azure/AWS/Heroku).'
+            'title': 'Développeur .NET (Apprentissage)',
+            'company': 'BPCE Solutions Informatiques',
+            'location': 'France',
+            'period': 'Oct 2022 - Sept 2024',
+            'description': "Maintenance d'applications web existantes via le développement et les tests. Exécution de requêtes sur bases de données. Analyse des applications back-end et front-end pour proposer des solutions adaptées aux besoins. Déploiement d'applications web incluant configuration, tests de validation, intégration et pipelines de déploiement. Rédaction de documentation technique."
             },
             {
-                'title': 'Développeur',
-                'company': 'UVSQ & Université d\'Artois',
-                'location': 'Versailles & Lens, France',
-                'period': 'Sept 2017 - Jul 2021',
-                'description': 'Worked on various academic projects including: Sudoku game with Python and Pygame, Connect Four with Python and Tkinter, Flight reservation website, Chess game in Java, Naval battle in C, Binary tree manipulation with C++ and QT Creator, Aircraft fuel simulation with C++ and QT Creator, Binary decision diagram in Java, and Chatbot conversation system.'
+            'title': 'Développeur Web Apps IA & Big Data (Apprentissage)',
+            'company': 'ESGI',
+            'location': 'Paris, France',
+            'period': 'Sept 2022 - Déc 2024',
+            'description': "Développement d'une application web de scraping et de prédiction de classification de produits avec Python, Flask et BigQuery. Création d'une application web de détection de spam avec Python et Flask. Implémentation de la détection d'émotions dans la vidéo avec Python et Flask. Utilisation de cas d'usage LangChain et de divers services cloud (GCP/Azure/AWS/Heroku)."
             },
             {
-                'title': 'Equipier Qualifié',
-                'company': 'McDonald\'s',
-                'location': 'France',
-                'period': 'Jun 2018 - Oct 2022',
-                'description': 'Worked as a qualified team member while pursuing education.'
+            'title': 'Développeur',
+            'company': 'UVSQ & Université d\'Artois',
+            'location': 'Versailles & Lens, France',
+            'period': 'Sept 2017 - Juil 2021',
+            'description': "Participation à divers projets académiques : jeu de Sudoku avec Python et Pygame, Puissance 4 avec Python et Tkinter, site de réservation de vols, jeu d'échecs en Java, bataille navale en C, manipulation d'arbres binaires avec C++ et QT Creator, simulation de carburant d'avion avec C++ et QT Creator, diagramme de décision binaire en Java, et système de conversation chatbot."
+            },
+            {
+            'title': 'Equipier Qualifié',
+            'company': "McDonald's",
+            'location': 'France',
+            'period': 'Juin 2018 - Oct 2022',
+            'description': "Travail en tant qu'équipier qualifié tout en poursuivant mes études."
             }
         ]
 
