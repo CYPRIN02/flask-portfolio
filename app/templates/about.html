@@ -10,25 +10,25 @@
             <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Profile Image" class="img-fluid rounded shadow">
         </div>
         <div class="col-lg-8">
-            <h1 class="mb-4">About Me</h1>
+            <h1 class="mb-4">A propos de moi</h1>
             <p class="lead">
-                Recent Master's graduate in Artificial Intelligence and Big Data with a passion for developing innovative solutions and solving complex problems.
+                Diplomé d'un Master en Intelligence Artificielle et Big Data, je suis un analyste développeur passionné par la création d'applications intelligentes et performantes. Mon parcours m'a permis de travailler sur des projets variés, alliant théorie et pratique dans le domaine de l'informatique.
             </p>
             <p>
-                I specialize in software development with a focus on Python and C# technologies. My academic background in AI and Big Data has equipped me with strong analytical skills, while my professional experience at BPCE Solutions Informatiques has honed my practical development abilities.
+                Je me spécialise dans le développement logiciel avec un accent sur les technologies Python et C#. Mon parcours académique en IA et Big Data m'a doté de solides compétences analytiques, tandis que mon expérience professionnelle chez BPCE Solutions Informatiques a affiné mes capacités de développement pratique.
             </p>
             <p>
-                I'm particularly interested in creating efficient, intelligent applications that leverage machine learning and data analysis. I enjoy working in collaborative environments where I can contribute my technical skills while continuing to learn and grow as a developer.
+                Je suis particulièrement intéressé par la création d'applications efficaces et intelligentes qui tirent parti de Machine Learning et de l'analyse de données. J'apprécie de travailler dans des environnements collaboratifs où je peux contribuer mes compétences techniques tout en continuant à apprendre et à grandir en tant que développeur.
             </p>
             <div class="mt-4">
                 <a href="{{ url_for('static', filename='files/cv_rap_ref.pdf') }}" class="btn btn-primary me-2" target="_blank">
-                    <i class="fas fa-download me-2"></i>Download Resume
+                    <i class="fas fa-download me-2"></i>Télécharger le CV
                 </a>
                 <a href="{{ url_for('gallery') }}" class="btn btn-outline-primary me-2">
-                    <i class="fas fa-image me-2"></i>View Gallery
+                    <i class="fas fa-image me-2"></i>Voir la galerie
                 </a>
                 <a href="{{ url_for('contact') }}" class="btn btn-outline-dark">
-                    <i class="fas fa-envelope me-2"></i>Contact Me
+                    <i class="fas fa-envelope me-2"></i>Contactez-moi
                 </a>
             </div>
         </div>
@@ -37,8 +37,7 @@
 
 <!-- Education Section -->
 <section class="education-section py-5 mt-5">
-    <h2 class="section-title mb-5">Education</h2>
-    
+    <h2 class="section-title mb-5">Formation</h2>
     <div class="timeline">
         {% for edu in education %}
         <div class="timeline-item">
@@ -60,8 +59,8 @@
 
 <!-- Experience Section -->
 <section class="experience-section py-5 mt-5">
-    <h2 class="section-title mb-5">Experience</h2>
-    
+    <h2 class="section-title mb-5">Expérience</h2>
+
     <div class="timeline">
         {% for exp in experience %}
         <div class="timeline-item">
@@ -82,7 +81,7 @@
 </section>
 
 <section class="qr-section text-center my-5">
-    <h2 class="mb-3">Scan Me!</h2>
+    <h2 class="mb-3">Scanner le QR Code</h2>
     <p>Connectez-vous sur LinkedIn.</p>
     <img src="{{ url_for('static', filename='images/qr_site.png') }}" alt="QR Code" class="img-fluid" width="180">
 </section>
