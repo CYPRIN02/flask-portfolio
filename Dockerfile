@@ -24,7 +24,6 @@ COPY . .
 
 # 📦 Installe les dépendances Python
 RUN pip install --upgrade pip
-RUN pip install maturin
 RUN pip install -r requirements.txt
 
 # 🌐 Expose le port utilisé par Flask/Gunicorn
