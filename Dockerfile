@@ -5,6 +5,8 @@ FROM python:3.11-slim
 RUN apt-get update && apt-get install -y \
     build-essential \
     curl \
+    rustc \
+    cargo \
     git \
     libgl1 \
     libglib2.0-0 \
@@ -22,6 +24,7 @@ COPY . .
 
 # 📦 Installe les dépendances Python
 RUN pip install --upgrade pip
+RUN pip install maturin
 RUN pip install -r requirements.txt
 
 # 🌐 Expose le port utilisé par Flask/Gunicorn
