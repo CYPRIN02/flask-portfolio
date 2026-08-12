@@ -13,7 +13,7 @@ A personal portfolio website built with Flask for RASOLOARIVONY ANDRIANANTENAINA
 
 ## Setup Instructions
 
-1. Make sure you have Python installed (Python 3.6 or higher recommended)
+1. Make sure you have Python installed (Python 3.11 or higher recommended)
 
 2. Install the required dependencies:
    ```
@@ -32,7 +32,7 @@ A personal portfolio website built with Flask for RASOLOARIVONY ANDRIANANTENAINA
 
 5. Open your browser and navigate to:
    ```
-   http://localhost:5000
+   http://localhost:8000
    ```
 
 ## Project Structure

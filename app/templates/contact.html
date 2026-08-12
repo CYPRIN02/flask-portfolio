@@ -77,15 +77,15 @@
                             <div>
                                 <h3 class="h6 mb-1">Réseaux Sociaux</h3>
                                 <div class="social-links mt-2">
-                                    <a href="https://github.com/CYPRIN02" target="_blank" class="me-3">
+                                    <a href="https://github.com/CYPRIN02" target="_blank" rel="noopener noreferrer" class="me-3">
                                         <i class="fab fa-github fa-lg"></i>
                                     </a>
-                                    <a href="https://www.linkedin.com/in/andrianantenaina-princy-r-649594151/" target="_blank" class="me-3">
+                                    <a href="https://www.linkedin.com/in/andrianantenaina-princy-r-649594151/" target="_blank" rel="noopener noreferrer" class="me-3">
                                         <i class="fab fa-linkedin fa-lg"></i>
                                     </a>
                                     
-                                    <a href="https://tr.ee/VhHmqtSlYl" title = "tel:+33658935289" target="_blank" class="me-3">
-                                        <i class="fas fa-phone fa-lg"></i></a>
+                                    <a href="https://tr.ee/VhHmqtSlYl" title="tel:+33658935289" target="_blank" rel="noopener noreferrer" class="me-3">
+                                        <i class="fas fa-phone fa-lg"></i>
                                     </a>
                                 </div>
                             </div>
@@ -134,6 +134,10 @@
 {% block extra_js %}
 <script>
 document.querySelector('form').addEventListener('submit', function(e) {
+    if (e.defaultPrevented || !this.checkValidity()) {
+        return;
+    }
+
     const submitBtn = this.querySelector('button[type="submit"]');
     submitBtn.disabled = true;
     submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Envoi...';

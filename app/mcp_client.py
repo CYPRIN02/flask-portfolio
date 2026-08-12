@@ -45,14 +45,18 @@ def create_airtable_record(base_id, table_id, fields):
     # Get Airtable API key from environment variable
     api_key = os.environ.get('AIRTABLE_API_KEY')
     
-    # If no API key is provided, use a mock response for development
+    # If no API key is provided, use a mock response for development only.
     if not api_key:
-        current_app.logger.warning("No Airtable API key found. Using mock response.")
-        return {
-            "id": "rec123456789",
-            "createdTime": "2023-01-01T00:00:00.000Z",
-            "fields": fields
-        }
+        if current_app.debug:
+            current_app.logger.warning("No Airtable API key found. Using mock response.")
+            return {
+                "id": "rec123456789",
+                "createdTime": "2023-01-01T00:00:00.000Z",
+                "fields": fields
+            }
+
+        current_app.logger.error("AIRTABLE_API_KEY is required to save contact form submissions")
+        return None
     
     # Airtable API endpoint
     url = f"https://api.airtable.com/v0/{base_id}/{table_id}"
@@ -69,10 +73,10 @@ def create_airtable_record(base_id, table_id, fields):
     }
     
     # Make the API request
-    response = requests.post(url, headers=headers, json=payload)
+    response = requests.post(url, headers=headers, json=payload, timeout=10)
     
     # Check if the request was successful
-    if response.status_code == 200:
+    if response.status_code in (200, 201):
         return response.json()
     else:
         current_app.logger.error(f"Airtable API error: {response.status_code} - {response.text}")
