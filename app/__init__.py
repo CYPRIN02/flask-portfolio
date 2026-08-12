@@ -71,3 +71,6 @@ def create_app(config_class=Config):
     init_routes(app)
     
     return app
+
+
+app = create_app()
