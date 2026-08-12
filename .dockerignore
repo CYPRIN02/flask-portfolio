@@ -6,11 +6,15 @@ __pycache__/
 *.sqlite3
 .env
 .env.*
-*.pdf
+.git/
+.venv/
+venv/
+ENV/
+env/
+logs/
 .ipynb_checkpoints/
 *.ipynb
 .DS_Store
 .vscode/
-*.md
 tests/
 build.sh
