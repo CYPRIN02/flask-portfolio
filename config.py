@@ -11,6 +11,7 @@ def _str_to_bool(value, default=False):
 
 class Config:
     """Configuration settings for the Flask application"""
+    FLASK_DEBUG_ENABLED = _str_to_bool(os.environ.get('FLASK_DEBUG'), False)
     
     # Secret key for session management and CSRF protection
     SECRET_KEY = (
@@ -23,6 +24,8 @@ class Config:
     SESSION_COOKIE_HTTPONLY = True
     SESSION_COOKIE_SAMESITE = 'Lax'
     SESSION_COOKIE_SECURE = _str_to_bool(os.environ.get('SESSION_COOKIE_SECURE'), bool(os.environ.get('RENDER')))
+    TEMPLATES_AUTO_RELOAD = _str_to_bool(os.environ.get('TEMPLATES_AUTO_RELOAD'), FLASK_DEBUG_ENABLED)
+    SEND_FILE_MAX_AGE_DEFAULT = int(os.environ.get('SEND_FILE_MAX_AGE_DEFAULT') or (0 if FLASK_DEBUG_ENABLED else 43200))
     
     # Database configuration (SQLite for development)
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///portfolio.db'

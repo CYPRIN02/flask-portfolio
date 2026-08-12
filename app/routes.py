@@ -48,7 +48,7 @@ def init_routes(app):
                 project["image_url"] = get_supabase_public_url(f"uploads/{project['image']}")
 
         return render_template('index.html', 
-                             title='Home', 
+                             title='Accueil', 
                              projects=projects, 
                              skills=skills, 
                              now=datetime.now())
@@ -59,7 +59,7 @@ def init_routes(app):
         education = Education.get_all_education()
         experience = Experience.get_all_experience()
         return render_template('about.html',
-                            title='About',
+                            title='À propos',
                             education=education,
                             experience=experience,
                             now=datetime.now())
@@ -69,7 +69,7 @@ def init_routes(app):
         """Route de la liste des projets"""
         projects = Project.get_all_projects()
         return render_template('projects.html',
-                            title='Projects',
+                            title='Projets',
                             projects=projects,
                             now=datetime.now())
 
@@ -78,7 +78,7 @@ def init_routes(app):
         """Route de détail d'un projet"""
         project = Project.get_project_by_id(project_id)
         if not project:
-            flash('Project not found', 'danger')
+            flash('Projet introuvable.', 'danger')
             return redirect(url_for('projects'))
         return render_template('project_detail.html',
                             title=project['title'],
@@ -93,12 +93,12 @@ def init_routes(app):
             try:
                 if request.form.get('website'):
                     current_app.logger.info("Honeypot contact submission blocked")
-                    flash('Your message has been sent! I will get back to you soon.', 'success')
+                    flash('Votre message a bien été envoyé. Je vous répondrai dès que possible.', 'success')
                     return redirect(url_for('contact'))
 
                 ip_address = request.headers.get('X-Forwarded-For', request.remote_addr or 'unknown').split(',')[0].strip()
                 if _is_contact_rate_limited(ip_address):
-                    flash('Too many messages sent. Please try again later.', 'warning')
+                    flash('Trop de messages ont été envoyés depuis cette adresse. Merci de réessayer un peu plus tard.', 'warning')
                     return redirect(url_for('contact'))
 
                 form_data = {
@@ -109,32 +109,32 @@ def init_routes(app):
                 }
 
                 if not all(form_data.values()):
-                    flash('Please fill all required fields', 'danger')
+                    flash('Merci de remplir tous les champs obligatoires.', 'danger')
                     return redirect(url_for('contact'))
 
                 if not _is_valid_email(form_data['email']):
-                    flash('Please enter a valid email address', 'danger')
+                    flash('Merci de saisir une adresse e-mail valide.', 'danger')
                     return redirect(url_for('contact'))
 
                 if len(form_data['name']) > 120 or len(form_data['email']) > 254 or len(form_data['subject']) > 180 or len(form_data['message']) > 3000:
-                    flash('Your message is too long. Please shorten it and try again.', 'danger')
+                    flash('Votre message est trop long. Merci de le raccourcir avant de réessayer.', 'danger')
                     return redirect(url_for('contact'))
                 
                 airtable_success = submit_to_airtable(**form_data)
                 email_success = send_contact_notification(form_data)
                 
                 if airtable_success:
-                    flash('Your message has been sent! I will get back to you soon.', 'success')
+                    flash('Votre message a bien été envoyé. Je vous répondrai dès que possible.', 'success')
                     if not email_success:
                         current_app.logger.warning("Message saved but notification email failed")
                 else:
-                    flash('There was an error sending your message. Please try again later.', 'danger')
+                    flash("Une erreur est survenue pendant l'envoi du message. Merci de réessayer plus tard.", 'danger')
                 
                 return redirect(url_for('contact'))
             
             except Exception as e:
                 current_app.logger.error(f"Contact form error: {str(e)}")
-                flash('A system error occurred. Please try again later.', 'danger')
+                flash("Une erreur technique est survenue. Merci de réessayer plus tard.", 'danger')
                 return render_template('contact.html',
                                     title='Contact',
                                     form_data=request.form, now=datetime.now())
@@ -148,4 +148,4 @@ def init_routes(app):
     @app.route('/gallery')
     def gallery():
         items = GalleryItem.get_all_items()
-        return render_template('gallery.html', title="Gallery", items=items, now=datetime.now())
+        return render_template('gallery.html', title="Galerie", items=items, now=datetime.now())

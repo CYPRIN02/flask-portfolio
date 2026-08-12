@@ -26,7 +26,7 @@ def create_app(config_class=Config):
     @app.errorhandler(CSRFError)
     def handle_csrf_error(error):
         app.logger.warning("CSRF validation failed: %s", error.description)
-        flash('Your session expired. Please try again.', 'warning')
+        flash('Votre session a expiré. Merci de réessayer.', 'warning')
         return redirect(url_for('contact'))
 
     @app.after_request

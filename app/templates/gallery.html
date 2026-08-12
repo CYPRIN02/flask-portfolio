@@ -1,29 +1,29 @@
 {% extends "layout.html" %}
-{% block title %}Gallery{% endblock %}
+{% block title %}Galerie{% endblock %}
 
 {% block content %}
 <section class="gallery py-5">
     <div class="text-center mb-5">
-        <h1>Gallery of My Journey</h1>
-        <p class="lead">Explore the key moments that define my path.</p>
+        <h1>Galerie de mon parcours</h1>
+        <p class="lead">Quelques moments marquants de mon parcours professionnel, académique et personnel.</p>
     </div>
 
-    <!-- Filter -->
+    <!-- Filtres -->
     <div class="text-center mb-4">
-        <button class="btn btn-outline-primary me-2 active" data-filter="all">All</button>
-        {% for tag in ['AI', 'Work', 'Award', 'Interview', 'English', 'Media', 'Ecole', 'Loisir', 'Holiday'] %}
+        <button class="btn btn-outline-primary me-2 active" data-filter="all">Tous</button>
+        {% for tag in ['IA', 'Travail', 'Réussite', 'Interview', 'Langues', 'Média', 'École', 'Loisir', 'Vacances'] %}
         <button class="btn btn-outline-secondary me-2" data-filter="{{ tag }}">{{ tag }}</button>
         {% endfor %}
     </div>
 
-    <!-- Loader -->
+    <!-- Indicateur de chargement -->
     <div id="gallery-loader" class="text-center my-5">
         <div class="spinner-border text-primary" role="status">
-            <span class="visually-hidden">Loading...</span>
+            <span class="visually-hidden">Chargement...</span>
         </div>
     </div>
 
-    <!-- Gallery Grid -->
+    <!-- Grille de la galerie -->
     <div class="row gallery-grid" style="display: none;">
         {% for item in items %}
         <div class="col-md-6 col-lg-4 mb-4 gallery-item" data-tags="{{ ' '.join(item.tags) }}">
@@ -35,7 +35,7 @@
                 {% elif item.media_type == 'video' %}
                     <video class="card-img-top" controls muted style="width: 100%; border-radius: 5px;">
                         <source src="{{ item.media_url }}" type="video/mp4">
-                        Your browser does not support the video tag.
+                        Votre navigateur ne prend pas en charge la lecture de cette vidéo.
                     </video>
                 {% endif %}
                 <div class="card-body">
@@ -62,13 +62,13 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-    // Hide loader and show gallery
+    // Masque l'indicateur de chargement et affiche la galerie.
     setTimeout(() => {
         document.getElementById('gallery-loader').style.display = 'none';
         document.querySelector('.gallery-grid').style.display = 'flex';
     }, 1000);
 
-    // Filtering logic
+    // Logique de filtrage.
     const filterButtons = document.querySelectorAll('[data-filter]');
     filterButtons.forEach(button => {
         button.addEventListener('click', function () {

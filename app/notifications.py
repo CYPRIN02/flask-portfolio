@@ -5,7 +5,7 @@ from app.models import Message as MessageModel
 
 def send_contact_notification(form_data):
     """
-    Send email notification for new contact form submission
+    Send an email notification for a new contact form submission.
     """
     try:
         # Create message object
@@ -18,7 +18,7 @@ def send_contact_notification(form_data):
         
         # Prepare email
         email = Message(
-            subject=f"New Contact: {message['subject']}",
+            subject=f"Nouveau contact : {message['subject']}",
             sender=current_app.config['MAIL_DEFAULT_SENDER'],
             recipients=[current_app.config['ADMIN_EMAIL']],
             body=MessageModel.format_for_email(message)

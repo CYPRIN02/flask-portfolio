@@ -1,17 +1,17 @@
 {% extends "layout.html" %}
 
-{% block title %}Projects{% endblock %}
+{% block title %}Projets{% endblock %}
 
 {% block content %}
-<!-- Projects Header -->
+<!-- En-tête des projets -->
 <section class="projects-header py-5">
     <h1 class="mb-4">Mes projets</h1>
     <p class="lead">
-        Voici une collection de projets sur lesquels j'ai travaillé, mettant en valeur mes compétences et mon expérience dans diverses technologies.
+        Voici une sélection de projets réalisés pendant mon parcours académique, mon apprentissage et mes travaux personnels. Ils illustrent ma pratique du développement logiciel, de la data et de l'intelligence artificielle.
     </p>
 </section>
 
-<!-- Projects Grid -->
+<!-- Grille des projets -->
 <section class="projects-grid py-3">
     <div class="row">
         {% for project in projects %}
@@ -29,7 +29,7 @@
                 </div>
                 <div class="card-footer bg-white">
                     <div class="d-flex justify-content-between">
-                        <a href="{{ url_for('project_detail', project_id=project.id) }}" class="btn btn-primary">Voir détails</a>
+                        <a href="{{ url_for('project_detail', project_id=project.id) }}" class="btn btn-primary">Voir le détail</a>
                         <div>
                             {% if project.github_url %}
                             <a href="{{ project.github_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark me-1">
@@ -50,23 +50,27 @@
     </div>
 </section>
 
-<!-- Project Categories (Optional) -->
+<!-- Catégories de projets -->
 <section class="project-categories py-5 mt-4">
     <h2 class="h4 mb-4">Filtrer par technologie</h2>
     <div class="d-flex flex-wrap gap-2 mb-4">
         <button class="btn btn-outline-primary active" data-filter="all">Tous</button>
         <button class="btn btn-outline-primary" data-filter="Python">Python</button>
+        <button class="btn btn-outline-primary" data-filter="C#">C#</button>
+        <button class="btn btn-outline-primary" data-filter=".NET">.NET</button>
+        <button class="btn btn-outline-primary" data-filter="ASP.NET Core MVC">ASP.NET Core MVC</button>
+        <button class="btn btn-outline-primary" data-filter="Angular">Angular</button>
         <button class="btn btn-outline-primary" data-filter="Flask">Flask</button>
         <button class="btn btn-outline-primary" data-filter="JavaScript">JavaScript</button>
-        <button class="btn btn-outline-primary" data-filter="React">React</button>
         <button class="btn btn-outline-primary" data-filter="SQL">SQL</button>
+        <button class="btn btn-outline-primary" data-filter="SQL Server">SQL Server</button>
     </div>
 </section>
 {% endblock %}
 
 {% block extra_js %}
 <script>
-    // Simple filtering functionality
+    // Filtrage simple par technologie.
     document.addEventListener('DOMContentLoaded', function() {
         const filterButtons = document.querySelectorAll('[data-filter]');
         const projectCards = document.querySelectorAll('.projects-grid .col-md-6');
@@ -75,11 +79,11 @@
             button.addEventListener('click', function() {
                 const filterValue = this.getAttribute('data-filter');
                 
-                // Update active button
+                // Met à jour le bouton actif.
                 filterButtons.forEach(btn => btn.classList.remove('active'));
                 this.classList.add('active');
                 
-                // Filter projects
+                // Filtre les projets.
                 if (filterValue === 'all') {
                     projectCards.forEach(card => card.style.display = 'block');
                 } else {

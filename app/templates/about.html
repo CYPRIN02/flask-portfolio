@@ -1,27 +1,27 @@
 {% extends "layout.html" %}
 
-{% block title %}About{% endblock %}
+{% block title %}À propos{% endblock %}
 
 {% block content %}
-<!-- About Section -->
+<!-- Section à propos -->
 <section class="about-section py-5">
     <div class="row">
         <div class="col-lg-4 mb-4 mb-lg-0">
-            <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Profile Image" class="img-fluid rounded shadow">
+            <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Portrait professionnel de RASOLOARIVONY ANDRIANANTENAINA PRINCY" class="img-fluid rounded shadow">
         </div>
         <div class="col-lg-8">
-            <h1 class="mb-4">A propos de moi</h1>
+            <h1 class="mb-4">À propos de moi</h1>
             <p class="lead">
-                Diplomé d'un Master en Intelligence Artificielle et Big Data, je suis un analyste développeur passionné par la création d'applications intelligentes et performantes. Mon parcours m'a permis de travailler sur des projets variés, alliant théorie et pratique dans le domaine de l'informatique.
+                Je suis analyste développeur, diplômé d'un Master en Intelligence Artificielle et Big Data à l'ESGI. Mon parcours combine développement logiciel, analyse de données et intégration de solutions IA.
             </p>
             <p>
-                Je me spécialise dans le développement logiciel avec un accent sur les technologies Python et C#. Mon parcours académique en IA et Big Data m'a doté de solides compétences analytiques, tandis que mon expérience professionnelle chez BPCE Solutions Informatiques a affiné mes capacités de développement pratique.
+                Lors de mon alternance chez BPCE Solutions Informatiques, j'ai travaillé sur la maintenance d'applications web, le développement et les tests, l'analyse du back-end et du front-end, l'exécution de requêtes SQL, le déploiement d'applications et la rédaction de documentation technique.
             </p>
             <p>
-                Je suis particulièrement intéressé par la création d'applications efficaces et intelligentes qui tirent parti de Machine Learning et de l'analyse de données. J'apprécie de travailler dans des environnements collaboratifs où je peux contribuer mes compétences techniques tout en continuant à apprendre et à grandir en tant que développeur.
+                Je recherche aujourd'hui un poste en CDI en développement ou en analyse data, avec l'envie de contribuer à des projets utiles, fiables et bien construits. J'aime apprendre vite, travailler en équipe et transformer un besoin métier en solution claire.
             </p>
             <div class="mt-4">
-                <a href="{{ url_for('static', filename='files/cv_rap_ref.pdf') }}" class="btn btn-primary me-2" target="_blank" rel="noopener noreferrer">
+                <a href="{{ url_for('static', filename='files/CV_RAP.pdf') }}" class="btn btn-primary me-2" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-download me-2"></i>Télécharger le CV
                 </a>
                 <a href="{{ url_for('gallery') }}" class="btn btn-outline-primary me-2">
@@ -35,7 +35,7 @@
     </div>
 </section>
 
-<!-- Education Section -->
+<!-- Section formation -->
 <section class="education-section py-5 mt-5">
     <h2 class="section-title mb-5">Formation</h2>
     <div class="timeline">
@@ -58,7 +58,7 @@
 
     <div class="education-logos text-center mt-5">
         <div class="education-logos text-center mt-5">
-            <h4 class="mb-4">Plateformes de formation complémentaires :</h4>
+            <h4 class="mb-4">Plateformes de formation complémentaires</h4>
             <img src="{{ url_for('static', filename='images/linkedin_learning_logo.PNG') }}" alt="LinkedIn Learning" class="logo-icon img-fluid">
             <img src="{{ url_for('static', filename='images/percipio_logo.PNG') }}" alt="Percipio Learning" class="logo-icon img-fluid">
             <img src="{{ url_for('static', filename='images/bdigit_bpce_logo.PNG') }}" alt="B'digit BPCE Formation" class="logo-icon img-fluid">
@@ -68,7 +68,7 @@
     </div>
 
 </section>
-<!-- Experience Section -->
+<!-- Section expérience -->
 <section class="experience-section py-5 mt-5">
     <h2 class="section-title mb-5">Expérience</h2>
 
@@ -93,7 +93,7 @@
 
 <section class="qr-section text-center my-5">
     <h2 class="mb-3">Scanner le QR Code</h2>
-    <p>Connectez-vous sur LinkedIn.</p>
+    <p>Scannez ce QR code pour accéder directement à mon profil LinkedIn.</p>
     <img src="{{ url_for('static', filename='images/qr_site.png') }}" alt="QR Code" class="img-fluid" width="180">
 </section>
 
@@ -101,7 +101,7 @@
 
 {% block extra_css %}
 <style>
-    /* Timeline styling */
+    /* Style de la frise chronologique */
     .timeline {
         position: relative;
         padding-left: 30px;

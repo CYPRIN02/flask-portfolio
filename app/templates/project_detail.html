@@ -3,7 +3,7 @@
 {% block title %}{{ project.title }}{% endblock %}
 
 {% block content %}
-<!-- Project Detail Header -->
+<!-- En-tête du détail projet -->
 <section class="project-header py-5">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -23,12 +23,12 @@
             <div class="mb-4">
                 {% if project.github_url %}
                 <a href="{{ project.github_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-dark me-2">
-                    <i class="fab fa-github me-2"></i>Référentiel GitHub
+                    <i class="fab fa-github me-2"></i>Voir le dépôt GitHub
                 </a>
                 {% endif %}
                 {% if project.live_url %}
                 <a href="{{ project.live_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                    <i class="fas fa-external-link-alt me-2"></i>Démo en direct
+                    <i class="fas fa-external-link-alt me-2"></i>Voir la démo
                 </a>
                 {% endif %}
             </div>
@@ -36,49 +36,47 @@
     </div>
 </section>
 
-<!-- Project Image -->
+<!-- Image du projet -->
 <section class="project-image mb-5">
     <div class="card shadow-sm">
         <img src="{{ project.image_url }}" class="card-img-top" alt="{{ project.title }}">
     </div>
 </section>
 
-<!-- Project Description -->
+<!-- Description du projet -->
 <section class="project-description py-4">
     <div class="row">
         <div class="col-lg-8">
             <h2 class="h3 mb-4">Aperçu du projet</h2>
             <p class="lead mb-4">{{ project.description }}</p>
             
-            <!-- Extended description - in a real app, you would have more detailed content here -->
+            {% if project.get('details') %}
             <p>
-                Ce projet répond à un besoin concret avec une solution robuste et maintenable.
-                Il s'appuie sur des pratiques modernes de développement logiciel pour proposer
-                une expérience claire, performante et agréable à utiliser.
+                {{ project.details }}
             </p>
+            {% endif %}
             
             <h3 class="h4 mt-5 mb-3">Fonctionnalités clés</h3>
             <ul class="list-group list-group-flush mb-5">
-                <li class="list-group-item">Interface responsive adaptée aux principaux écrans</li>
-                <li class="list-group-item">Parcours utilisateur simple et lisible</li>
-                <li class="list-group-item">Architecture pensée pour faciliter la maintenance</li>
-                <li class="list-group-item">Gestion structurée des données et des traitements</li>
-                <li class="list-group-item">Base technique prête pour des évolutions futures</li>
+                {% for feature in project.get('features', [
+                    'Interface responsive adaptée aux principaux écrans',
+                    'Parcours utilisateur simple et lisible',
+                    'Architecture pensée pour faciliter la maintenance',
+                    'Gestion structurée des données et des traitements',
+                    'Base technique prête pour des évolutions futures'
+                ]) %}
+                <li class="list-group-item">{{ feature }}</li>
+                {% endfor %}
             </ul>
             
             <h3 class="h4 mt-5 mb-3">Défis techniques</h3>
-            <p>
-                Pendant le développement, plusieurs enjeux techniques ont guidé les choix d'implémentation :
-            </p>
-            <p>
-                Un point important a été de préserver la performance tout en gardant une base de code
-                claire et maintenable. Les choix techniques ont donc privilégié des traitements simples,
-                lisibles et adaptés aux technologies utilisées.
-            </p>
-            <p>
-                L'intégration entre l'interface et la logique applicative a également demandé une attention
-                particulière afin d'obtenir un comportement cohérent et facile à faire évoluer.
-            </p>
+            {% for challenge in project.get('challenges', [
+                "Préserver la performance tout en gardant une base de code claire et maintenable.",
+                "Assurer une bonne cohérence entre l'interface, les données et la logique applicative.",
+                "Adapter les choix techniques au besoin métier et aux contraintes du projet."
+            ]) %}
+            <p>{{ challenge }}</p>
+            {% endfor %}
         </div>
         
         <div class="col-lg-4">
@@ -90,15 +88,15 @@
                     <ul class="list-unstyled">
                         <li class="mb-3">
                             <strong>Type de projet :</strong> 
-                            <span class="text-muted">Application web</span>
+                            <span class="text-muted">{{ project.get('type', 'Application web') }}</span>
                         </li>
                         <li class="mb-3">
                             <strong>Durée :</strong> 
-                            <span class="text-muted">7 mois</span>
+                            <span class="text-muted">{{ project.get('duration', 'Projet académique') }}</span>
                         </li>
                         <li class="mb-3">
                             <strong>Rôle :</strong> 
-                            <span class="text-muted">Développeur full-stack</span>
+                            <span class="text-muted">{{ project.get('role', 'Développeur') }}</span>
                         </li>
                         <li>
                             <strong>Technologies :</strong><br>
@@ -134,7 +132,7 @@
     </div>
 </section>
 
-<!-- Navigation between projects -->
+<!-- Navigation entre les projets -->
 <section class="project-navigation py-4 mt-5">
     <div class="d-flex justify-content-between">
         <a href="{{ url_for('projects') }}" class="btn btn-outline-secondary">

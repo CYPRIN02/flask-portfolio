@@ -7,7 +7,7 @@
 <section class="contact-header py-5">
     <h1 class="mb-4">Contactez-moi</h1>
     <p class="lead mb-5">
-        Vous avez une question ou souhaitez collaborer ? N'hésitez pas à me contacter via le formulaire ci-dessous.
+        Vous souhaitez échanger au sujet d'une opportunité, d'un projet ou d'une collaboration ? Envoyez-moi un message, je vous répondrai dès que possible.
     </p>
 </section>
 
@@ -21,7 +21,7 @@
                     <form method="POST" action="{{ url_for('contact') }}">
                         <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
                         <div class="visually-hidden" aria-hidden="true">
-                            <label for="website">Website</label>
+                            <label for="website">Site web</label>
                             <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
                         </div>
                         
@@ -30,7 +30,7 @@
                             <input type="text" class="form-control" id="name" name="name" maxlength="120" required>
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
+                            <label for="email" class="form-label">E-mail</label>
                             <input type="email" class="form-control" id="email" name="email" maxlength="254" required>
                         </div>
                         <div class="mb-3">
@@ -41,7 +41,7 @@
                             <label for="message" class="form-label">Message</label>
                             <textarea class="form-control" id="message" name="message" rows="5" maxlength="3000" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                        <button type="submit" class="btn btn-primary">Envoyer mon message</button>
                     </form>
                 </div>
             </div>
@@ -57,7 +57,7 @@
                                 <i class="fas fa-envelope fa-2x text-primary"></i>
                             </div>
                             <div>
-                                <h3 class="h6 mb-1">Email</h3>
+                                <h3 class="h6 mb-1">E-mail</h3>
                                 <p class="mb-0">prasoloarivony@gmail.com</p>
                             </div>
                         </li>
@@ -75,7 +75,7 @@
                                 <i class="fas fa-globe fa-2x text-primary"></i>
                             </div>
                             <div>
-                                <h3 class="h6 mb-1">Réseaux Sociaux</h3>
+                                <h3 class="h6 mb-1">Réseaux sociaux</h3>
                                 <div class="social-links mt-2">
                                     <a href="https://github.com/CYPRIN02" target="_blank" rel="noopener noreferrer" class="me-3">
                                         <i class="fab fa-github fa-lg"></i>
@@ -98,10 +98,10 @@
                 <div class="card-body p-4">
                     <h2 class="h4 mb-4">Disponibilité</h2>
                     <p>
-                        Je suis actuellement disponible pour des missions freelance, des postes à temps plein et des projets collaboratifs.
+                        Je suis actuellement ouvert aux opportunités en CDI, aux missions freelance et aux projets collaboratifs en développement logiciel, data et IA.
                     </p>
                     <p class="mb-0">
-                        Délai de réponse : <span class="text-success">Dans les 24 heures</span>
+                        Délai de réponse habituel : <span class="text-success">sous 24 heures</span>
                     </p>
                 </div>
             </div>
@@ -140,7 +140,7 @@ document.querySelector('form').addEventListener('submit', function(e) {
 
     const submitBtn = this.querySelector('button[type="submit"]');
     submitBtn.disabled = true;
-    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Envoi...';
+    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Envoi en cours...';
 });
 </script>
 {% endblock %}

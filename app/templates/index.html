@@ -1,46 +1,46 @@
 {% extends "layout.html" %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Accueil{% endblock %}
 
 {% block content %}
-<!-- Hero Section -->
+<!-- Section d'accueil -->
 <section class="hero-section py-5">
     <div class="row align-items-center">
         <div class="col-lg-6">
             <h1 class="display-4 fw-bold">Bonjour, je suis <span class="text-primary">RASOLOARIVONY </span><span class="text-primary proper-case">Princy</span></h1>
-            <h2 class="h3 mb-4">Analyste Développeur C# | Python spécialisé en Intelligence Artificielle</h2>
+            <h2 class="h3 mb-4">Analyste développeur C# et Python, spécialisé en intelligence artificielle</h2>
             
             <p class="lead mb-4">
-                Jeune diplômé d'un Master en Intelligence Artificielle et Big Data à l'ESGI. Passionné par le développement logiciel, l'analyse de données et l'intégration de solutions IA.
+                Jeune diplômé d'un Master en Intelligence Artificielle et Big Data à l'ESGI, j'ai consolidé mon expérience chez BPCE Solutions Informatiques en développement logiciel, analyse de données et intégration de solutions IA.
             </p>
 
             <h5 class="h5 mb-4">Permis B</h5>
 
             <div class="d-flex gap-3">
-                <a href="{{ url_for('projects') }}" class="btn btn-primary btn-lg">Voir Projets</a>
+                <a href="{{ url_for('projects') }}" class="btn btn-primary btn-lg">Voir mes projets</a>
                 <a href="{{ url_for('contact') }}" class="btn btn-outline-dark btn-lg">Contactez-moi</a>
             </div>
         </div>
         <div class="col-lg-6 mt-5 mt-lg-0 text-center">
-            <img src="{{ url_for('static', filename='images/profile1.jpeg') }}" alt="Profile Image" class="img-fluid rounded-circle profile-image">
+            <img src="{{ url_for('static', filename='images/profile1.jpeg') }}" alt="Portrait de RASOLOARIVONY ANDRIANANTENAINA PRINCY" class="img-fluid rounded-circle profile-image">
         </div>
     </div>
 </section>
-<!-- Video Welcome Section -->
+<!-- Section vidéo de présentation -->
 <section class="video-welcome my-5 text-center">
     <h2 class="mb-4 fw-bold">Bienvenue !</h2>
-    <p class="lead mb-4">Voilà une vidéo de présentation brève de moi-même et de mon parcours.</p>
+    <p class="lead mb-4">Une courte vidéo pour présenter mon profil, mon parcours et ma façon d'aborder les projets.</p>
 
     <div class="video-wrapper mx-auto">
         <video controls autoplay muted loop playsinline>
             <source src="https://gauxrigjmrovzsqygmqx.supabase.co/storage/v1/object/public/portfolio-media/uploads/presentation-profil.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+            Votre navigateur ne prend pas en charge la lecture de cette vidéo.
         </video>
     </div>
 </section>
-<!-- Featured Projects Section -->
+<!-- Section des projets mis en avant -->
 <section class="featured-projects py-5 mt-5">
-    <h2 class="section-title text-center mb-5">Projets réalisés :</h2>
+    <h2 class="section-title text-center mb-5">Projets réalisés</h2>
     <div class="row">
         {% for project in projects %}
         <div class="col-md-6 mb-4">
@@ -55,7 +55,7 @@
                         {% endfor %}
                     </div>
                     <div class="d-flex justify-content-between">
-                        <a href="{{ url_for('project_detail', project_id=project.id) }}" class="btn btn-primary">Voir détails</a>
+                        <a href="{{ url_for('project_detail', project_id=project.id) }}" class="btn btn-primary">Voir le détail</a>
                         <div>
                             {% if project.github_url %}
                             <a href="{{ project.github_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark me-1">
@@ -78,9 +78,9 @@
         <a href="{{ url_for('projects') }}" class="btn btn-outline-primary">Tous les projets</a>
     </div>
 </section>
-<!-- Skills Section -->
+<!-- Section des compétences -->
 <section class="skills-section py-5 mt-5">
-    <h2 class="section-title text-center mb-5">Compétences & Expertise</h2>
+    <h2 class="section-title text-center mb-5">Compétences et expertise</h2>
     {% for skill_category in skills %}
     <div class="skill-category mb-5">
         <h3 class="h4 mb-4">{{ skill_category.category }}</h3>
@@ -105,7 +105,7 @@
                     <!-- Sous-section Frameworks -->
                     <div class="collapse" id="frameworks-{{ skill.name|lower|replace(' ', '-') }}">
                         <div class="card card-body bg-light">
-                            <h6 class="mb-2">Frameworks & Technologies:</h6>
+                            <h6 class="mb-2">Frameworks et technologies</h6>
                             <div class="d-flex flex-wrap">
                                 {% for framework in skill.get('frameworks', []) %}
                                 <span class="badge bg-secondary me-2 mb-2">{{ framework }}</span>
